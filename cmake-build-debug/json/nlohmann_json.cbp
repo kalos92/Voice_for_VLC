@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="nlohmann_json"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\json\;CMake Files\json\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Continuous">
+				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Experimental">
+				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nightly">
+				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/json/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\json\"/>
+		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/json/cmake/config.cmake.in">
+			<Option virtualFolder="CMake Files\json\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

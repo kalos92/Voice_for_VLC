@@ -1,0 +1,37 @@
+{
+	"media":
+		[
+		{
+		 "title":"SailorMoon",
+		 "path":"/anime/Sailormoon/",
+		 "format": ".avi",
+			"seasons":
+			[
+			{"season":1, "episodes":15},
+			{"season":2, "episodes":15}
+			]
+		},
+		{
+		 "title":"Digimon",
+		 "path":"/anime/Digimon/",
+		 "format":".avi",
+			"seasons":
+			[
+			{"season":1, "episodes":16},
+			{"season":2, "episodes":20}
+			]
+		},
+		{
+		"title":"a",
+		"path":"/series/a/",
+		"format":".mp4",
+			"seasons":
+			[
+			{"season":1,"episodes":3},
+			{"season":2,"episodes":1}
+			]
+		}
+		
+
+		]
+}
