@@ -11,7 +11,7 @@ BuildDirectory: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/json
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: bestia
+Site: asus
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -71,7 +71,7 @@ ValgrindCommand:
 ValgrindCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
-MemoryCheckCommand: /usr/bin/valgrind
+MemoryCheckCommand: /usr/local/bin/valgrind
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 

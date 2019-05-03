@@ -28,33 +28,33 @@ The CXX compiler identification is GNU, found in "/home/kalos/CLionProjects/Voic
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a4e89/fast 
-/usr/bin/make -f CMakeFiles/cmTC_a4e89.dir/build.make CMakeFiles/cmTC_a4e89.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d84c7/fast 
+/usr/bin/make -f CMakeFiles/cmTC_d84c7.dir/build.make CMakeFiles/cmTC_d84c7.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a4e89.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a4e89.dir/testCCompiler.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_a4e89
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4e89.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_a4e89.dir/testCCompiler.c.o  -o cmTC_a4e89 
+Building C object CMakeFiles/cmTC_d84c7.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d84c7.dir/testCCompiler.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d84c7
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d84c7.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_d84c7.dir/testCCompiler.c.o  -o cmTC_d84c7 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8333c/fast 
-/usr/bin/make -f CMakeFiles/cmTC_8333c.dir/build.make CMakeFiles/cmTC_8333c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_53024/fast 
+/usr/bin/make -f CMakeFiles/cmTC_53024.dir/build.make CMakeFiles/cmTC_53024.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccws0fXI.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccjkk3Ks.s
 GNU C11 (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gnu)
 	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -72,15 +72,15 @@ GNU C11 (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gn
 	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 5f69ca549f086e2c3748f9d1423a4dee
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o /tmp/ccws0fXI.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o /tmp/ccjkk3Ks.s
 GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_8333c
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8333c.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o  -o cmTC_8333c 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_53024
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53024.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o  -o cmTC_53024 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -90,8 +90,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8333c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOioezM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8333c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_53024' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cczlD53B.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_53024 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -116,19 +116,19 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_8333c/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8333c.dir/build.make CMakeFiles/cmTC_8333c.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_53024/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_53024.dir/build.make CMakeFiles/cmTC_53024.dir/build]
   ignore line: [make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [Target: x86_64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccws0fXI.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccjkk3Ks.s]
   ignore line: [GNU C11 (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -146,15 +146,15 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 5f69ca549f086e2c3748f9d1423a4dee]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o /tmp/ccws0fXI.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o /tmp/ccjkk3Ks.s]
   ignore line: [GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_8333c]
-  ignore line: [/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8333c.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o  -o cmTC_8333c ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_53024]
+  ignore line: [/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53024.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o  -o cmTC_53024 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -164,13 +164,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8333c' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOioezM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8333c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_53024' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cczlD53B.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_53024 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccOioezM.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cczlD53B.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -187,7 +187,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8333c] ==> ignore
+    arg [cmTC_53024] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -199,7 +199,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_8333c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_53024.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -229,14 +229,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c63e4/fast 
-/usr/bin/make -f CMakeFiles/cmTC_c63e4.dir/build.make CMakeFiles/cmTC_c63e4.dir/build
+Run Build Command(s):/usr/bin/make cmTC_943d7/fast 
+/usr/bin/make -f CMakeFiles/cmTC_943d7.dir/build.make CMakeFiles/cmTC_943d7.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c63e4.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_c63e4.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c63e4
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c63e4.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_c63e4.dir/feature_tests.c.o  -o cmTC_c63e4 
+Building C object CMakeFiles/cmTC_943d7.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_943d7.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_943d7
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_943d7.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_943d7.dir/feature_tests.c.o  -o cmTC_943d7 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -249,14 +249,14 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3e13c/fast 
-/usr/bin/make -f CMakeFiles/cmTC_3e13c.dir/build.make CMakeFiles/cmTC_3e13c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_6e159/fast 
+/usr/bin/make -f CMakeFiles/cmTC_6e159.dir/build.make CMakeFiles/cmTC_6e159.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3e13c.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3e13c.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3e13c
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e13c.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_3e13c.dir/feature_tests.c.o  -o cmTC_3e13c 
+Building C object CMakeFiles/cmTC_6e159.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_6e159.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6e159
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e159.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6e159.dir/feature_tests.c.o  -o cmTC_6e159 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -269,14 +269,14 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_68275/fast 
-/usr/bin/make -f CMakeFiles/cmTC_68275.dir/build.make CMakeFiles/cmTC_68275.dir/build
+Run Build Command(s):/usr/bin/make cmTC_dd620/fast 
+/usr/bin/make -f CMakeFiles/cmTC_dd620.dir/build.make CMakeFiles/cmTC_dd620.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_68275.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_68275.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_68275
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68275.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_68275.dir/feature_tests.c.o  -o cmTC_68275 
+Building C object CMakeFiles/cmTC_dd620.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_dd620.dir/feature_tests.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dd620
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd620.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_dd620.dir/feature_tests.c.o  -o cmTC_dd620 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -287,33 +287,33 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_fda74/fast 
-/usr/bin/make -f CMakeFiles/cmTC_fda74.dir/build.make CMakeFiles/cmTC_fda74.dir/build
+Run Build Command(s):/usr/bin/make cmTC_67019/fast 
+/usr/bin/make -f CMakeFiles/cmTC_67019.dir/build.make CMakeFiles/cmTC_67019.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fda74.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_fda74.dir/testCXXCompiler.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_fda74
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fda74.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_fda74.dir/testCXXCompiler.cxx.o  -o cmTC_fda74 
+Building CXX object CMakeFiles/cmTC_67019.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_67019.dir/testCXXCompiler.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_67019
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67019.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_67019.dir/testCXXCompiler.cxx.o  -o cmTC_67019 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ba4ec/fast 
-/usr/bin/make -f CMakeFiles/cmTC_ba4ec.dir/build.make CMakeFiles/cmTC_ba4ec.dir/build
+Run Build Command(s):/usr/bin/make cmTC_82655/fast 
+/usr/bin/make -f CMakeFiles/cmTC_82655.dir/build.make CMakeFiles/cmTC_82655.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -v -o CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccF9zMq5.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc2gRRFC.s
 GNU C++ (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gnu)
 	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -335,15 +335,15 @@ GNU C++ (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gn
 	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 8c2b43f572cd3f060e41aeab70254763
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccF9zMq5.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc2gRRFC.s
 GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_ba4ec
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba4ec.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ba4ec 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_82655
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82655.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_82655 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -353,8 +353,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba4ec' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccznSTc9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ba4ec /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_82655' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOwob3L.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_82655 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -385,19 +385,19 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_ba4ec/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ba4ec.dir/build.make CMakeFiles/cmTC_ba4ec.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_82655/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_82655.dir/build.make CMakeFiles/cmTC_82655.dir/build]
   ignore line: [make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: x86_64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccF9zMq5.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc2gRRFC.s]
   ignore line: [GNU C++ (Ubuntu 5.4.0-6ubuntu1~16.04.11) version 5.4.0 20160609 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -419,15 +419,15 @@ Parsed CXX implicit link information from above output:
   ignore line: [	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 8c2b43f572cd3f060e41aeab70254763]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccF9zMq5.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc2gRRFC.s]
   ignore line: [GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_ba4ec]
-  ignore line: [/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba4ec.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ba4ec ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_82655]
+  ignore line: [/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82655.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_82655 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -437,13 +437,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba4ec' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccznSTc9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_ba4ec /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_82655' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOwob3L.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_82655 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccznSTc9.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccOwob3L.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -460,7 +460,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ba4ec] ==> ignore
+    arg [cmTC_82655] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -472,7 +472,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_ba4ec.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_82655.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -500,14 +500,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_aafa8/fast 
-/usr/bin/make -f CMakeFiles/cmTC_aafa8.dir/build.make CMakeFiles/cmTC_aafa8.dir/build
+Run Build Command(s):/usr/bin/make cmTC_85a48/fast 
+/usr/bin/make -f CMakeFiles/cmTC_85a48.dir/build.make CMakeFiles/cmTC_85a48.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_aafa8.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_aafa8.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_aafa8
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aafa8.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_aafa8.dir/feature_tests.cxx.o  -o cmTC_aafa8 
+Building CXX object CMakeFiles/cmTC_85a48.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_85a48.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_85a48
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85a48.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_85a48.dir/feature_tests.cxx.o  -o cmTC_85a48 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -573,14 +573,14 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_380bd/fast 
-/usr/bin/make -f CMakeFiles/cmTC_380bd.dir/build.make CMakeFiles/cmTC_380bd.dir/build
+Run Build Command(s):/usr/bin/make cmTC_192d2/fast 
+/usr/bin/make -f CMakeFiles/cmTC_192d2.dir/build.make CMakeFiles/cmTC_192d2.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_380bd.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_380bd.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_380bd
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_380bd.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_380bd.dir/feature_tests.cxx.o  -o cmTC_380bd 
+Building CXX object CMakeFiles/cmTC_192d2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_192d2.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_192d2
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_192d2.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_192d2.dir/feature_tests.cxx.o  -o cmTC_192d2 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -646,14 +646,14 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_90b93/fast 
-/usr/bin/make -f CMakeFiles/cmTC_90b93.dir/build.make CMakeFiles/cmTC_90b93.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d9bfe/fast 
+/usr/bin/make -f CMakeFiles/cmTC_d9bfe.dir/build.make CMakeFiles/cmTC_d9bfe.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_90b93.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_90b93.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_90b93
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90b93.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_90b93.dir/feature_tests.cxx.o  -o cmTC_90b93 
+Building CXX object CMakeFiles/cmTC_d9bfe.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_d9bfe.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d9bfe
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9bfe.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_d9bfe.dir/feature_tests.cxx.o  -o cmTC_d9bfe 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -719,14 +719,14 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2d13f/fast 
-/usr/bin/make -f CMakeFiles/cmTC_2d13f.dir/build.make CMakeFiles/cmTC_2d13f.dir/build
+Run Build Command(s):/usr/bin/make cmTC_2b015/fast 
+/usr/bin/make -f CMakeFiles/cmTC_2b015.dir/build.make CMakeFiles/cmTC_2b015.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2d13f.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2d13f.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2d13f
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d13f.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_2d13f.dir/feature_tests.cxx.o  -o cmTC_2d13f 
+Building CXX object CMakeFiles/cmTC_2b015.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2b015.dir/feature_tests.cxx.o -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2b015
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b015.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_2b015.dir/feature_tests.cxx.o  -o cmTC_2b015 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -790,28 +790,28 @@ make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_02b2e/fast 
-/usr/bin/make -f CMakeFiles/cmTC_02b2e.dir/build.make CMakeFiles/cmTC_02b2e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b60b5/fast 
+/usr/bin/make -f CMakeFiles/cmTC_b60b5.dir/build.make CMakeFiles/cmTC_b60b5.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_02b2e.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_02b2e.dir/CheckIncludeFile.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_02b2e
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02b2e.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_02b2e.dir/CheckIncludeFile.c.o  -o cmTC_02b2e 
+Building C object CMakeFiles/cmTC_b60b5.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b60b5.dir/CheckIncludeFile.c.o   -c /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b60b5
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b60b5.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_b60b5.dir/CheckIncludeFile.c.o  -o cmTC_b60b5 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_62c6b/fast 
-/usr/bin/make -f CMakeFiles/cmTC_62c6b.dir/build.make CMakeFiles/cmTC_62c6b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d070b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_d070b.dir/build.make CMakeFiles/cmTC_d070b.dir/build
 make[1]: Entering directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_62c6b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_62c6b.dir/CheckFunctionExists.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
-Linking C executable cmTC_62c6b
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62c6b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_62c6b.dir/CheckFunctionExists.c.o  -o cmTC_62c6b -lpthread 
+Building C object CMakeFiles/cmTC_d070b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d070b.dir/CheckFunctionExists.c.o   -c /home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d070b
+/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d070b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d070b.dir/CheckFunctionExists.c.o  -o cmTC_d070b -lpthread 
 make[1]: Leaving directory '/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

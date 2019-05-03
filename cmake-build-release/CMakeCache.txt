@@ -92,11 +92,11 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CODEBLOCKS_COMPILER_ID:STRING=
 
 //The CodeBlocks executable
-CMAKE_CODEBLOCKS_EXECUTABLE:FILEPATH=CMAKE_CODEBLOCKS_EXECUTABLE-NOTFOUND
+CMAKE_CODEBLOCKS_EXECUTABLE:FILEPATH=/usr/bin/codeblocks
 
 //Additional command line arguments when CodeBlocks invokes make.
 // Enter e.g. -j<some_number> to get parallel builds
-CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j8
+CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j4
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -321,7 +321,7 @@ DART_TESTING_TIMEOUT:STRING=1500
 GITCOMMAND:FILEPATH=/usr/bin/git
 
 //Path to a program.
-HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
+HGCOMMAND:FILEPATH=/usr/bin/hg
 
 //Install CMake targets during install step.
 JSON_Install:BOOL=ON
@@ -330,7 +330,7 @@ JSON_Install:BOOL=ON
 JSON_MultipleHeaders:BOOL=OFF
 
 //Path to a library.
-LIBVLCCORE_LIBRARY:FILEPATH=/usr/lib/libvlccore.so
+LIBVLCCORE_LIBRARY:FILEPATH=LIBVLCCORE_LIBRARY-NOTFOUND
 
 //Path to a file.
 LIBVLC_INCLUDE_DIR:PATH=/usr/include
@@ -342,7 +342,7 @@ LIBVLC_LIBRARY:FILEPATH=/usr/lib/libvlc.so
 MAKECOMMAND:STRING=/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 
 //Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
+MEMORYCHECK_COMMAND:FILEPATH=/usr/local/bin/valgrind
 
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
@@ -369,7 +369,7 @@ ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
 //Name of the computer/site where compile is being run
-SITE:STRING=bestia
+SITE:STRING=asus
 
 //Path to the SLURM sbatch executable
 SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
@@ -385,12 +385,6 @@ Voice_for_VLC_BINARY_DIR:STATIC=/home/kalos/CLionProjects/Voice_for_VLC/cmake-bu
 
 //Value Computed by CMake
 Voice_for_VLC_SOURCE_DIR:STATIC=/home/kalos/CLionProjects/Voice_for_VLC
-
-//Value Computed by CMake
-google_assistant_for_vlc_BINARY_DIR:STATIC=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release
-
-//Value Computed by CMake
-google_assistant_for_vlc_SOURCE_DIR:STATIC=/home/kalos/CLionProjects/Voice_for_VLC
 
 //Value Computed by CMake
 nlohmann_json_BINARY_DIR:STATIC=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json

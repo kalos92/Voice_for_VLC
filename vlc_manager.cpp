@@ -16,12 +16,14 @@ std::vector<Media> medias;
 
 using json = nlohmann::json;
 
-void vlc_manager::controller() {
+void vlc_manager::controller(const Costants& k) {
 
     Current_status cs;
     // load the vlc engine
     cs.inst = libvlc_new(0, nullptr);
-
+    //initial status
+    Status state = S_STOP;
+    //creating the DB based on the Json
     vlc_manager::parse_json();
 
     while(true) {
@@ -30,52 +32,70 @@ void vlc_manager::controller() {
         msg = sq->read_message();
 
         if(msg->getCommand() == DESTROY) {
+            if(State_Machine::change_status(state, msg->getCommand()) == EXCEPTION) {
+                Response res(ERROR, "L'azione richiesta non è permessa");
+                sq->write_response(res);
+            }
+
+            vlc_manager::save_current_status();
             return;
         }
 
         if(msg->getCommand() == PLAY)
         {
-            try {
-                if(!cs.paused || !msg->getTitle().empty())
-                {
-                    if(cs.mp != nullptr)
-                        libvlc_media_player_release(cs.mp);
-                    // create a new item
-                    cs.m = libvlc_media_new_path(cs.inst,  msg->getPath().c_str());
-
-                    // create a media play playing environment
-                    cs.mp = libvlc_media_player_new_from_media(cs.m);
-
-                    // no need to keep the media now
-                    libvlc_media_release(cs.m);
-
-                    // play the media_player
-                    libvlc_media_player_play(cs.mp);
-                    //set the volume for debugging reason to 0
-                    libvlc_audio_set_volume(cs.mp, 50);
-                    //set a specificy time for the media
-                    auto time = (libvlc_time_t) msg->getTime();
-                    libvlc_media_player_set_time(cs.mp, time);
-                    //go to fullscreen
-                    libvlc_set_fullscreen(cs.mp, true);
-
-                    if(!update_current_media(&cs, msg.get()))
-                        throw NotFoundException();
-
-                    Response res(SUCCESS, "Impostato il video");
-                    sq->write_response(res);
-                }
-                else
-                {
-                    cs.paused = false;
-                    libvlc_media_player_play(cs.mp);
-                }
-
-            } catch (...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando Play");
+            if(State_Machine::change_status(state, msg->getCommand()) == EXCEPTION) {
+                Response res(ERROR, "L'azione richiesta non è permessa");
                 sq->write_response(res);
             }
+            else {
 
+                try {
+                    if (!cs.paused || !msg->getTitle().empty()) {
+                        if (cs.mp != nullptr)
+                            libvlc_media_player_release(cs.mp);
+
+                        Media *media = vlc_manager::search_media_from_title_and_update_current_media(&cs, msg.get());
+
+                        if (media == nullptr)
+                            throw NotFoundException();
+
+                        std::string episode_path = vlc_manager::calculate_what_to_play(msg.get(), media, k);
+
+                        if (episode_path.empty())
+                            throw NotFoundException();
+
+                        // create a new item
+                        cs.m = libvlc_media_new_path(cs.inst, (episode_path).c_str());
+
+                        // create a media play playing environment
+                        cs.mp = libvlc_media_player_new_from_media(cs.m);
+
+                        // no need to keep the media now
+                        libvlc_media_release(cs.m);
+
+                        // play the media_player
+                        libvlc_media_player_play(cs.mp);
+
+                        //set the volume for debugging reason to 0
+                        libvlc_audio_set_volume(cs.mp, 0);
+
+                        //go to fullscreen
+                        libvlc_set_fullscreen(cs.mp, true);
+
+                        Response res(SUCCESS, "Now playing: " + msg->getTitle());
+                        sq->write_response(res);
+
+
+                    } else {
+                        cs.paused = false;
+                        libvlc_media_player_play(cs.mp);
+                    }
+
+                } catch (...) {
+                    Response res(ERROR, "Qualcosa e' andato storto nel comando Play");
+                    sq->write_response(res);
+                }
+            }
         }
 
         else if(msg->getCommand() == NEXT)
@@ -86,7 +106,7 @@ void vlc_manager::controller() {
 
                     libvlc_media_player_stop(cs.mp);
 
-                    const std::string media_path = calculate_season_and_episode(&cs, msg.get(), true);
+                    const std::string media_path = calculate_next_or_previous(&cs, msg.get(), true, k);
                     cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
 
                     cs.mp = libvlc_media_player_new_from_media(cs.m);
@@ -118,7 +138,7 @@ void vlc_manager::controller() {
 
                     libvlc_media_player_stop(cs.mp);
 
-                    const std::string media_path = calculate_season_and_episode(&cs, msg.get(), false);
+                    const std::string media_path = calculate_next_or_previous(&cs, msg.get(), false, k);
                     cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
 
                     cs.mp = libvlc_media_player_new_from_media(cs.m);
@@ -237,7 +257,7 @@ void vlc_manager::parse_json() {
 }
 
 
-bool vlc_manager::update_current_media(Current_status *cs, Message *msg){
+Media* vlc_manager::search_media_from_title_and_update_current_media(Current_status *cs, Message *msg){
 
     auto it = std::find_if(medias.begin(), medias.end(), [&msg](Media const& item){
         return item.getTitle() == msg->getTitle();
@@ -249,6 +269,21 @@ bool vlc_manager::update_current_media(Current_status *cs, Message *msg){
         cs->current_media = new Media(medias[index]);
         cs->episode = msg->getEpisode();
         cs->season = msg->getSeason();
+        return cs->current_media;
+    }
+
+    return nullptr;
+
+}
+
+bool vlc_manager::search_a_media(Current_status *cs, Message *msg){
+
+    auto it = std::find_if(medias.begin(), medias.end(), [&msg](Media const& item){
+        return item.getTitle() == msg->getTitle();
+    });
+
+    if (it != medias.end()) {
+
         return true;
     }
 
@@ -256,7 +291,7 @@ bool vlc_manager::update_current_media(Current_status *cs, Message *msg){
 
 }
 
-const std::string vlc_manager::calculate_season_and_episode(Current_status *cs, Message *msg,bool next){
+const std::string vlc_manager::calculate_next_or_previous(Current_status *cs, Message *msg, bool next, Costants k){
 
     int episode_in_season = cs->current_media->getEpisodeXSeason()[cs->season-1].second;
     int seasons = cs->current_media->getEpisodeXSeason().size();
@@ -283,14 +318,63 @@ const std::string vlc_manager::calculate_season_and_episode(Current_status *cs, 
         else if(cs->episode == 1 && cs->season == 1){
             cs->season = seasons;
             cs->episode = cs->current_media->getEpisodeXSeason()[cs->season-1].second;
-        }else//if I'm ath whaterver episode of a season
+        }else//if I'm at whatever episode of a season
             cs->episode--;
     }
 
 
-    return path_series+cs->current_media->getPath()+"/"+std::to_string(cs->season)+"/"+cs->current_media->getTitle()+"S"+
-           std::to_string(cs->season)+"E"+std::to_string(cs->episode)+cs->current_media->getFormat();
+    return k.getPath() + "/" + cs->current_media->getPath() + "/" + std::to_string(cs->season) + "/" +
+            cs->current_media->getTitle() + "S" + std::to_string(cs->season) + "E" +
+            std::to_string(cs->episode) + cs->current_media->getFormat();
 
+}
+
+std::string vlc_manager::calculate_what_to_play(Message *msg, const Media& media, Costants k) {
+
+    if(msg->getSeason() == 0){
+        int season = 0;
+        int episode = 0;
+
+        if(msg->getEpisode() > media.getEpisodes())
+            return "";
+        else if(msg->getEpisode() == 1){
+            season = 1;
+            episode = 1;
+        }
+        else if(msg->getEpisode() == media.getEpisodes()){
+            season = media.getEpisodeXSeason().size();
+            episode = media.getEpisodeXSeason()[media.getEpisodeXSeason().size()-1].second;
+        }
+        else{
+
+            auto exs = media.getEpisodeXSeason();
+            int sum = 0;
+
+            for( auto es : exs ){
+
+                sum += es.second;
+
+                if(sum >= msg->getEpisode())
+                    break;
+
+                season++;
+            }
+
+            episode = msg->getEpisode() - sum + exs[season].second;
+            season++;
+        }
+
+
+
+        return k.getPath() + "/" +media.getPath() + "/" + std::to_string(season) + "/" + media.getTitle() + "S"
+               + std::to_string(season) + "E" + std::to_string(episode) + media.getFormat();
+
+    }
+    else{
+        return k.getPath() + "/" +media.getPath() + "/" + std::to_string(msg->getSeason()) + "/" + media.getTitle() + "S"
+        + std::to_string(msg->getSeason()) + "E" + std::to_string(1) + media.getFormat();
+
+    }
 }
 
 

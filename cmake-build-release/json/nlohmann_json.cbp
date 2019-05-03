@@ -11,40 +11,40 @@
 				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Continuous">
 				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Continuous"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Experimental">
 				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Experimental"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Nightly">
 				<Option working_dir="/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Nightly"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release/json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>

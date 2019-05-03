@@ -15,15 +15,13 @@ class Message {
         Message()= default;
 
         Message(Command command, std::string path, std::string title, int season, int episode, double time) :
-            command(command), path(std::move(path)), title(std::move(title)), season(season), episode(episode), time(time){};
+            command(command), title(std::move(title)), season(season), episode(episode), time(time){};
 
         ~Message()= default;
 
         Message& operator=(const Message& other);
 
         const Command &getCommand() const; //& return a const reference
-
-        std::string getPath() const;
 
         const std::string &getTitle() const;
 
@@ -36,7 +34,6 @@ class Message {
 
     private:
         Command command;
-        std::string path;
         std::string title;
         int season;
         int episode;
@@ -49,20 +46,20 @@ class Response {
 public:
     Response()= default;
 
-    Response(Status status, std::string response):
+    Response(Result status, std::string response):
              status(status), response(std::move(response)){};
     ~Response()= default;
 
     Response& operator=(const Response& other);
 
-    const Status &getStatus() const; //& return a const reference
+    const Result &getStatus() const; //& return a const reference
 
     std::string getResponse() const;
 
 
 
 private:
-    Status status;
+    Result status;
     std::string response;
 
 };

@@ -40,3 +40,11 @@ void Media::putEpisodeXSeason(int s, int e) {
 void Media::setEpisodeXSeason(const std::vector<std::pair<int, int>> &episodeXSeason) {
     episode_x_season = episodeXSeason;
 }
+
+int Media::getEpisodes() const {
+    return episodes;
+}
+
+void Media::setEpisodes(int episodes) {
+    Media::episodes = episodes;
+}

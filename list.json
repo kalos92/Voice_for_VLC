@@ -3,8 +3,9 @@
 		[
 		{
 		 "title":"SailorMoon",
-		 "path":"/anime/Sailormoon/",
+		 "path":"Sailor_moon",
 		 "format": ".avi",
+		 "episodes" : 30,
 			"seasons":
 			[
 			{"season":1, "episodes":15},
@@ -13,8 +14,9 @@
 		},
 		{
 		 "title":"Digimon",
-		 "path":"/anime/Digimon/",
+		 "path":"Digimon",
 		 "format":".avi",
+		 "episodes" : 36,
 			"seasons":
 			[
 			{"season":1, "episodes":16},
@@ -23,8 +25,9 @@
 		},
 		{
 		"title":"a",
-		"path":"/series/a/",
+		"path":"a",
 		"format":".mp4",
+		"episodes" : 4,
 			"seasons":
 			[
 			{"season":1,"episodes":3},

@@ -9,9 +9,6 @@
 --   atomic
 --   date_time
 --   regex
--- Found LibVLC include-dir path: /usr/include
--- Found LibVLC library path:/usr/lib/libvlc.so
--- Found LibVLCcore library path:/usr/lib/libvlccore.so
 -- Using the single-header code from /home/kalos/CLionProjects/Voice_for_VLC/json/single_include/
 -- Configuring done
 -- Generating done

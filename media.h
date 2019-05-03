@@ -37,6 +37,7 @@ public:
         format = other.format;
         title = other.title;
         episode_x_season = other.episode_x_season;
+        episodes = other.episodes;
     }
 
     Media (const Media *other)
@@ -46,6 +47,7 @@ public:
             format = other->format;
             title = other->title;
             episode_x_season = other->episode_x_season;
+            episodes = other->episodes;
         }
     }
 
@@ -55,18 +57,26 @@ public:
             format = other->format;
             title = other->title;
             episode_x_season = other->episode_x_season;
-
+            episodes = other->episodes;
         return *this;
     }
+
+    int getEpisodes() const;
+
+    void setEpisodes(int episodes);
+
+    void setEpisodeXSeason(const std::vector<std::pair<int, int>> &episodeXSeason);
 
 private:
 
     std::string title;
     std::string path;
     std::string format;
+    int episodes;
     std::vector<std::pair<int,int>> episode_x_season;
-public:
-    void setEpisodeXSeason(const std::vector<std::pair<int, int>> &episodeXSeason);
+
+
+
 
 };
 

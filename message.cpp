@@ -10,10 +10,6 @@ const Command &Message::getCommand() const {
     return command;
 }
 
-std::string Message::getPath() const {
-    return path;
-}
-
 const std::string &Message::getTitle() const {
     return title;
 }
@@ -36,8 +32,6 @@ Message &Message::operator=(const Message &other) {
         {
             command = other.command;
             season = other.season;
-            title = other.title;
-            path = other.path;
             title = other.title;
             time = other.time;
             episode = other.episode;
