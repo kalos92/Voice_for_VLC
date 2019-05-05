@@ -43,7 +43,7 @@ int main(int argc, char ** argv) {
 
 
     std::unique_ptr<Response> res;
-    Message m(FF, "", 0, 0, 0); //microsecondi
+    Message m(TIME, "", 0, 0, 0); //microsecondi
     sq->write_message(m);
     res = sq->read_response();
     std::cout << res->getResponse() << std::endl;
@@ -51,26 +51,32 @@ int main(int argc, char ** argv) {
     /*int i = random()%15+2;
     std::cout << std::to_string(i) << std::endl;
     sleep (i);*/
-    Message m2(PLAY, "a", 0, 4, 0);
+    Message m2(PLAY, "a", 0, 1, 0);
     sq->write_message(m2);
     res = sq->read_response();
     std::cout << res->getResponse() << std::endl;
 //
 
     sleep (5);
-    Message m3(PLAY, "a",  0, 2, 0);
+    Message m3(TIME, "",  0, 0, 50000);
     sq->write_message(m3);
     res = sq->read_response();
     std::cout << res->getResponse() << std::endl;
 //
     sleep (5);
-    Message m4(STOP, "", 0, 0, 0);
+    Message m4(TIME, "", 0, 0, 0);
     sq->write_message(m4);
     res = sq->read_response();
     std::cout << res->getResponse() << std::endl;
 
+    sleep (5);
+    Message m5(PERCENTAGE, "", 0, 0, 78);
+    sq->write_message(m5);
+    res = sq->read_response();
+    std::cout << res->getResponse() << std::endl;
+
 //    sleep (5);
-//    Message m5(REW, "", "", 0, 0, 500);
+//    Message m5(PERCENTAGE, "", "", 0, 0, 500);
 //    sq->write_message(m5);
 //    res = sq->read_response();
 //    std::cout << res->getResponse() << std::endl;

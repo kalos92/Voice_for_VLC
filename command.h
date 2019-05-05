@@ -14,8 +14,8 @@ enum Command {
     NEXT,
     PREVIOUS,
     DESTROY,
-    FF,
-    REW,
+    TIME,
+    PERCENTAGE,
     RESUME,
     RESTART
 
@@ -61,14 +61,14 @@ private:
     static bool check_if_permitted(Status s, Command c) {
 
        if (s == S_PLAY){
-           return c == FF || c == REW || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY
+           return c == TIME || c == PERCENTAGE || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY
                     || c == PAUSE;
        }
        else if (s == S_STOP){
            return   c == PLAY || c == DESTROY || c == RESTART;
        }
        else if (s == S_PAUSE){
-           return c == FF || c == REW || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY || c == RESUME;
+           return c == TIME || c == PERCENTAGE || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY || c == RESUME;
 
        }
        else if (s == S_DESTROY){
@@ -79,7 +79,7 @@ private:
 
     static Status from_commad_to_status(Status s, Command c){
 
-        if(c == FF || c == REW || c == NEXT || c == PREVIOUS )
+        if(c == TIME || c == PERCENTAGE || c == NEXT || c == PREVIOUS )
             return s;
 
         if(c == PLAY)
@@ -131,8 +131,8 @@ public:
             case NEXT: return "NEXT";
             case PREVIOUS: return "PREVIOUS";
             case DESTROY: return "DESTROY";
-            case FF: return "FAST FORWARD";
-            case REW: return "REWIND";
+            case TIME: return "FAST FORWARD";
+            case PERCENTAGE: return "REWIND";
             case RESUME: return "RESUME";
             case RESTART: return "RESTART";
         }

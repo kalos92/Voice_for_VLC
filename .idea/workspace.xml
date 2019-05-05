@@ -46,18 +46,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f427e07a-b3e0-43fa-a554-418543459357" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/command.h" beforeDir="false" afterPath="$PROJECT_DIR$/command.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json" beforeDir="false" afterPath="$PROJECT_DIR$/json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/include/nlohmann/detail/input/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/include/nlohmann/detail/input/lexer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/include/nlohmann/detail/output/serializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/include/nlohmann/detail/output/serializer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/single_include/nlohmann/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/single_include/nlohmann/json.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/test/src/unit-class_parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/test/src/unit-class_parser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/message.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message.h" beforeDir="false" afterPath="$PROJECT_DIR$/message.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/rest_server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.json" beforeDir="false" afterPath="$PROJECT_DIR$/save.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/synch_queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/synch_queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vlc_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vlc_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -78,8 +74,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/command.h">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-17">
-                    <caret line="62" selection-start-line="62" selection-end-line="62" />
+                  <state relative-caret-position="255">
+                    <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
                   </state>
                 </provider>
               </entry>
@@ -92,11 +88,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="162">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
               </folding>
@@ -104,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1977">
-              <caret line="174" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="537">
+              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -147,12 +143,12 @@
         <option value="$PROJECT_DIR$/media.h" />
         <option value="$PROJECT_DIR$/rest_server.cpp" />
         <option value="$PROJECT_DIR$/synch_queue.cpp" />
-        <option value="$PROJECT_DIR$/command.h" />
         <option value="$PROJECT_DIR$/vlc_manager.h" />
         <option value="$PROJECT_DIR$/message.h" />
         <option value="$PROJECT_DIR$/message.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/command.h" />
         <option value="$PROJECT_DIR$/vlc_manager.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -417,12 +413,12 @@
       <workItem from="1556800040139" duration="3831000" />
       <workItem from="1556868837245" duration="11044000" />
       <workItem from="1557050210889" duration="2690000" />
-      <workItem from="1557074780884" duration="8496000" />
+      <workItem from="1557074780884" duration="9470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82273000" />
+    <option name="totallyTimeSpent" value="83247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,7 +437,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3282365" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -482,7 +478,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>174</line>
+          <line>180</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -729,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1977">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/tuple">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -755,17 +741,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/command.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="255">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        <state relative-caret-position="162">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
           <folding>
             <element signature="e#40#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
