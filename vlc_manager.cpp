@@ -169,7 +169,7 @@ void vlc_manager::controller(const Costants& k) {
 
                         libvlc_media_player_set_time(cs.mp, time);
 
-                        Response res(SUCCESS, "Video moved to" + std::to_string(time) + "ms");
+                        Response res(SUCCESS, "Video moved to" + std::to_string(time) + " ms");
 
                         sq->write_response(res);
 
@@ -182,7 +182,7 @@ void vlc_manager::controller(const Costants& k) {
 
                         libvlc_media_player_set_position(cs.mp, time/100);
 
-                        Response res(SUCCESS, "Percentage settled of " + std::to_string(time) + "ms");
+                        Response res(SUCCESS, "Percentage settled at " + std::to_string(time/100) + "%");
 
                         sq->write_response(res);
 

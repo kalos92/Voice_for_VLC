@@ -131,8 +131,8 @@ public:
             case NEXT: return "NEXT";
             case PREVIOUS: return "PREVIOUS";
             case DESTROY: return "DESTROY";
-            case TIME: return "FAST FORWARD";
-            case PERCENTAGE: return "REWIND";
+            case TIME: return "TIME";
+            case PERCENTAGE: return "PERCENTAGE";
             case RESUME: return "RESUME";
             case RESTART: return "RESTART";
         }
