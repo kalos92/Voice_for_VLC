@@ -15,7 +15,9 @@ enum Command {
     PREVIOUS,
     DESTROY,
     FF,
-    REW
+    REW,
+    RESUME,
+    RESTART
 
 };
 
@@ -63,10 +65,10 @@ private:
                     || c == PAUSE;
        }
        else if (s == S_STOP){
-           return   c == PLAY || c == DESTROY;
+           return   c == PLAY || c == DESTROY || c == RESTART;
        }
        else if (s == S_PAUSE){
-           return c == FF || c == REW || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY;
+           return c == FF || c == REW || c == NEXT || c == PREVIOUS || c == STOP || c == PLAY || c == DESTROY || c == RESUME;
 
        }
        else if (s == S_DESTROY){
@@ -88,6 +90,10 @@ private:
             return S_DESTROY;
         if(c == PAUSE)
             return S_PAUSE;
+        if(c == RESUME)
+            return S_PLAY;
+        if(c == RESTART)
+            return S_PLAY;
     }
 
 public:
@@ -97,6 +103,40 @@ public:
            return from_commad_to_status(s,c);
        else
            return EXCEPTION;
+    }
+
+    static std::string status_to_string(Status s){
+
+        switch (s){
+            case S_PLAY:
+                return "PLAY";
+            case S_PAUSE:
+                return "PAUSE";
+            case S_STOP:
+                return "STOP";
+            case S_DESTROY:
+                return "DESTROY";
+            case EXCEPTION:
+                return "EXCEPTION";
+        }
+
+    }
+    static std::string command_to_string(Command c){
+
+        switch (c){
+
+            case PLAY: return "PLAY";
+            case PAUSE: return "PAUSE";
+            case STOP: return "STOP";
+            case NEXT: return "NEXT";
+            case PREVIOUS: return "PREVIOUS";
+            case DESTROY: return "DESTROY";
+            case FF: return "FAST FORWARD";
+            case REW: return "REWIND";
+            case RESUME: return "RESUME";
+            case RESTART: return "RESTART";
+        }
+
     }
 };
 

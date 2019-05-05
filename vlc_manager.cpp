@@ -11,49 +11,57 @@
 #include "NotRunningException.h"
 #include "NotFoundException.h"
 #include <algorithm>
+#include <iomanip>
 
 std::vector<Media> medias;
 
 using json = nlohmann::json;
-
+/*
+ * The main function that handle all messages and sends commands to VLC
+ *
+ * */
 void vlc_manager::controller(const Costants& k) {
 
+    //New current status
     Current_status cs;
+
     // load the vlc engine
     cs.inst = libvlc_new(0, nullptr);
-    //initial status
+
+    //The application starts with in the STOP status (No video are played
     Status state = S_STOP;
-    //creating the DB based on the Json
+
+    //creating the DB based on the Json so it can be consulted on demand
     vlc_manager::parse_json();
 
+    //getting an istance of the Synch Queue to get and put all messages
+    synch_queue *sq = synch_queue::get_instance();
+
+    //infinite loop to read/write messages
     while(true) {
+
+
         std::unique_ptr<Message> msg;
-        synch_queue *sq = synch_queue::get_instance();
+
+        //wait for a message
         msg = sq->read_message();
+        //if the action is permitted
+        if((state = State_Machine::change_status(state, msg->getCommand())) == EXCEPTION) {
+            Response res(ERROR, "Action not permitted");
+            sq->write_response(res);
 
-        if(msg->getCommand() == DESTROY) {
-            if(State_Machine::change_status(state, msg->getCommand()) == EXCEPTION) {
-                Response res(ERROR, "L'azione richiesta non è permessa");
-                sq->write_response(res);
-            }
-
-            vlc_manager::save_current_status();
-            return;
         }
+        else {
+            try {
+                switch (msg->getCommand()) {
 
-        if(msg->getCommand() == PLAY)
-        {
-            if(State_Machine::change_status(state, msg->getCommand()) == EXCEPTION) {
-                Response res(ERROR, "L'azione richiesta non è permessa");
-                sq->write_response(res);
-            }
-            else {
-
-                try {
-                    if (!cs.paused || !msg->getTitle().empty()) {
+                    case PLAY: {
+                        //if you want to play another media while another is currently playing, this close the current VLC
+                        //window
                         if (cs.mp != nullptr)
                             libvlc_media_player_release(cs.mp);
 
+                        //searching for the requested media in the DB
                         Media *media = vlc_manager::search_media_from_title_and_update_current_media(&cs, msg.get());
 
                         if (media == nullptr)
@@ -82,156 +90,174 @@ void vlc_manager::controller(const Costants& k) {
                         //go to fullscreen
                         libvlc_set_fullscreen(cs.mp, true);
 
-                        Response res(SUCCESS, "Now playing: " + msg->getTitle());
+                        Response res(SUCCESS,
+                                     "Now playing: " + msg->getTitle() + " Episode: " + std::to_string(cs.episode));
+
+                        sq->write_response(res);
+                    }
+                        break;
+                    case PAUSE: {
+
+                        libvlc_media_player_pause(cs.mp);
+
+                        Response res(SUCCESS, "Video Paused");
+
+                        sq->write_response(res);
+
+                    }
+                        break;
+                    case STOP: {
+
+                        libvlc_media_player_pause(cs.mp);
+
+                        auto time = libvlc_media_player_get_time(cs.mp);
+
+                        vlc_manager::save_current_status(cs, time);
+
+                        libvlc_media_player_stop(cs.mp);
+
+                        Response res(SUCCESS, "Video Stopped");
+
+                        sq->write_response(res);
+                    }
+                        break;
+                    case NEXT: {
+
+                        libvlc_media_player_stop(cs.mp);
+
+                        const std::string media_path = calculate_next_or_previous(&cs, msg.get(), true, k);
+
+                        cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
+
+                        cs.mp = libvlc_media_player_new_from_media(cs.m);
+
+                        libvlc_media_release(cs.m);
+                        // play the media_player
+                        libvlc_media_player_play(cs.mp);
+
+                        libvlc_audio_set_volume(cs.mp, 0);
+
+                        Response res(SUCCESS, "Next video is played");
+
                         sq->write_response(res);
 
 
-                    } else {
-                        cs.paused = false;
-                        libvlc_media_player_play(cs.mp);
                     }
+                        break;
 
-                } catch (...) {
-                    Response res(ERROR, "Qualcosa e' andato storto nel comando Play");
-                    sq->write_response(res);
+                    case PREVIOUS: {
+                        const std::string media_path = calculate_next_or_previous(&cs, msg.get(), false, k);
+
+                        cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
+
+                        cs.mp = libvlc_media_player_new_from_media(cs.m);
+
+                        libvlc_media_release(cs.m);
+                        // play the media_player
+                        libvlc_media_player_play(cs.mp);
+
+                        libvlc_audio_set_volume(cs.mp, 0);
+
+                        Response res(SUCCESS, "Previous video is played");
+
+                        sq->write_response(res);
+                    }
+                        break;
+                    case FF: {
+
+                        auto time = (libvlc_time_t) msg->getTime();
+
+                        libvlc_media_player_set_time(cs.mp, time);
+
+                        Response res(SUCCESS, "Fast fowarded video of " + std::to_string(time) + "ms");
+
+                        sq->write_response(res);
+
+                    }
+                        break;
+
+                    case REW: {
+
+                        auto time = (libvlc_time_t) msg->getTime();
+
+                        libvlc_media_player_set_time(cs.mp, time);
+
+                        Response res(SUCCESS, "Rewinded video of " + std::to_string(time) + "ms");
+
+                        sq->write_response(res);
+
+                    }
+                        break;
+                    case DESTROY: {
+
+                        libvlc_media_player_pause(cs.mp);
+
+                        auto time = libvlc_media_player_get_time(cs.mp);
+
+                        vlc_manager::save_current_status(cs, time);
+
+                        Response res(SUCCESS, "Process killed");
+
+                        sq->write_response(res);
+
+                        return;
+                    }
+                    case RESUME: {
+
+                        libvlc_media_player_play(cs.mp);
+
+                        Response res(SUCCESS, "Video resumed");
+
+                        sq->write_response(res);
+                    }
+                        break;
+                    case RESTART: {
+
+                        std::pair<std::string, uint64_t> details = vlc_manager::resume_from_save_state(k, &cs);
+
+                        if (details.first.empty())
+                            throw NotFoundException();
+
+                        // create a new item
+                        cs.m = libvlc_media_new_path(cs.inst, (details.first).c_str());
+
+                        // create a media play playing environment
+                        cs.mp = libvlc_media_player_new_from_media(cs.m);
+
+                        // no need to keep the media now
+                        libvlc_media_release(cs.m);
+
+                        // play the media_player
+                        libvlc_media_player_play(cs.mp);
+
+                        //restart from the last known status
+                        libvlc_media_player_set_time(cs.mp, details.second);
+
+                        //set the volume for debugging reason to 0
+                        libvlc_audio_set_volume(cs.mp, 0);
+
+                        //go to fullscreen
+                        libvlc_set_fullscreen(cs.mp, true);
+
+                        Response res(SUCCESS,
+                                     "Now playing: " + msg->getTitle() + " Episode:" + std::to_string(cs.episode));
+
+                        sq->write_response(res);
+                    }
+                        break;
                 }
             }
-        }
+            catch (...) {
+                Response res(ERROR, "Command " + State_Machine::command_to_string(msg->getCommand()) + " Failed");
 
-        else if(msg->getCommand() == NEXT)
-        {
-            try{
-                if(libvlc_media_player_is_playing(cs.mp) || cs.paused)
-                {
+                State_Machine::change_status(state, STOP);
 
-                    libvlc_media_player_stop(cs.mp);
+                if (cs.mp != nullptr)
+                    libvlc_media_player_release(cs.mp);
 
-                    const std::string media_path = calculate_next_or_previous(&cs, msg.get(), true, k);
-                    cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
-
-                    cs.mp = libvlc_media_player_new_from_media(cs.m);
-
-                    libvlc_media_release(cs.m);
-                    // play the media_player
-                    libvlc_media_player_play(cs.mp);
-                    libvlc_audio_set_volume(cs.mp, 0);
-                    std::cout << "next" << std::endl;
-                    Response res(SUCCESS, "Impostato il video successivo");
-                    sq->write_response(res);
-                }
-                else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile andare avanti");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando NEXT");
-                sq->write_response(res);
-            }
-
-
-        }
-
-        else if(msg->getCommand() == PREVIOUS )
-        {
-            try {
-                if (libvlc_media_player_is_playing(cs.mp) || cs.paused) {
-
-                    libvlc_media_player_stop(cs.mp);
-
-                    const std::string media_path = calculate_next_or_previous(&cs, msg.get(), false, k);
-                    cs.m = libvlc_media_new_path(cs.inst, media_path.c_str());
-
-                    cs.mp = libvlc_media_player_new_from_media(cs.m);
-
-                    libvlc_media_release(cs.m);
-                    // play the media_player
-                    libvlc_media_player_play(cs.mp);
-                    libvlc_audio_set_volume(cs.mp, 0);
-                    std::cout << "previous" << std::endl;
-                    Response res(SUCCESS, "Impostato il video precendente");
-                    sq->write_response(res);
-
-                } else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile andare indietro");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando PREVIOUS");
-                sq->write_response(res);
-            }
-        }
-        else if(msg->getCommand() == FF)
-        {
-            try {
-                if (libvlc_media_player_is_playing(cs.mp) || cs.paused) {
-                    auto time = (libvlc_time_t) msg->getTime();
-                    libvlc_media_player_set_time(cs.mp, time);
-                    Response res(SUCCESS, "Video mandato avanti");
-                    sq->write_response(res);
-
-                } else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile andare indietro");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando FF");
-                sq->write_response(res);
-            }
-        }
-        else if(msg->getCommand() == REW )
-        {
-            try {
-                if (libvlc_media_player_is_playing(cs.mp) || cs.paused) {
-                    auto time = (libvlc_time_t) msg->getTime();
-                    libvlc_media_player_set_time(cs.mp, time);
-                    Response res(SUCCESS, "Video mandato indietro");
-                    sq->write_response(res);
-
-                } else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile andare indietro");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando REW");
-                sq->write_response(res);
-            }
-        }
-        else if(msg->getCommand() == PAUSE )
-        {
-            try {
-                if (libvlc_media_player_is_playing(cs.mp) || cs.paused) {
-                    libvlc_media_player_pause(cs.mp);
-                    cs.paused = true;
-                    Response res(SUCCESS, "Video messo in pausa");
-                    sq->write_response(res);
-
-                } else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile mettere in pausa");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando PAUSA");
                 sq->write_response(res);
             }
         }
-        else if(msg->getCommand() == STOP )
-        {
-            try {
-                if (libvlc_media_player_is_playing(cs.mp) || cs.paused) {
-                    libvlc_media_player_stop(cs.mp);
-                    Response res(SUCCESS, "Video messo stoppato");
-                    sq->write_response(res);
-
-                } else{
-                    Response res(ERROR, "Non c'e' nulla in riproduzione, impossibile mettere in stop");
-                    sq->write_response(res);
-                }
-            }catch(...){
-                Response res(ERROR, "Qualcosa e' andato storto nel comando STOP");
-                sq->write_response(res);
-            }
-        }
-
     }
 }
 
@@ -247,6 +273,7 @@ void vlc_manager::parse_json() {
         m.setTitle(j["media"][i]["title"]);
         m.setPath(j["media"][i]["path"]);
         m.setFormat(j["media"][i]["format"]);
+        m.setEpisodes(j["media"][i]["episodes"]);
 
 
         for(int k = 0 ; k < j["media"][i]["seasons"].size() ; k++ ) {
@@ -276,20 +303,52 @@ Media* vlc_manager::search_media_from_title_and_update_current_media(Current_sta
 
 }
 
-bool vlc_manager::search_a_media(Current_status *cs, Message *msg){
+Media* vlc_manager::search_media_from_title(std::string title){
 
-    auto it = std::find_if(medias.begin(), medias.end(), [&msg](Media const& item){
-        return item.getTitle() == msg->getTitle();
+    auto it = std::find_if(medias.begin(), medias.end(), [&title](Media const& item){
+        return item.getTitle() == title;
     });
 
     if (it != medias.end()) {
 
-        return true;
+        long index = std::distance(medias.begin(), it);
+        return new Media(medias[index]);
     }
 
-    return false;
+    return nullptr;
 
 }
+
+std::pair<std::string, uint64_t> vlc_manager::resume_from_save_state(Costants k, Current_status *cs){
+
+    json j;
+
+    std::ifstream file("save.json");
+
+    j = json::parse(file);
+
+
+    cs->current_media = vlc_manager::search_media_from_title(j["status"]["last_title"]);
+    cs->episode = j["status"]["last_episode"];
+    cs->season = j["status"]["last_season"];
+    uint64_t time = j["status"]["stopped_time"];
+
+    std::string path;
+
+    if(cs->current_media != nullptr)
+        path = k.getPath() + "/" + cs->current_media->getPath() + "/" + std::to_string(cs->season) + "/" +
+                                      cs->current_media->getTitle() + "S" + std::to_string(cs->season) + "E" +
+                                      std::to_string(cs->episode) + cs->current_media->getFormat();
+
+    else
+        path = "";
+
+
+    return std::make_pair(path,time);
+
+
+}
+
 
 const std::string vlc_manager::calculate_next_or_previous(Current_status *cs, Message *msg, bool next, Costants k){
 
@@ -329,7 +388,15 @@ const std::string vlc_manager::calculate_next_or_previous(Current_status *cs, Me
 
 }
 
-std::string vlc_manager::calculate_what_to_play(Message *msg, const Media& media, Costants k) {
+
+/*This function calculate the episode that you want to play
+ * IFTTT on google assistants permits only 1 number and 1 string, so the message can be:
+ *
+ * PLAY THE 138 EPISODE OF SAILOR MOON
+ *
+ * this calculate in which season is the 138 episode an streams it.
+ */
+ std::string vlc_manager::calculate_what_to_play(Message *msg, const Media& media, Costants k) {
 
     if(msg->getSeason() == 0){
         int season = 0;
@@ -375,6 +442,21 @@ std::string vlc_manager::calculate_what_to_play(Message *msg, const Media& media
         + std::to_string(msg->getSeason()) + "E" + std::to_string(1) + media.getFormat();
 
     }
+}
+
+void vlc_manager::save_current_status(vlc_manager::Current_status cs, int64_t time) {
+
+    json j;
+
+    std::ofstream file("save.json");
+
+    j["status"]["last_title"] = cs.current_media->getTitle();
+    j["status"]["last_episode"] = cs.episode;
+    j["status"]["last_season"] = cs.season;
+    j["status"]["stopped_time"] = time;
+
+    file << std::setw(4) << j << std::endl;
+
 }
 
 

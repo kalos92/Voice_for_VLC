@@ -330,7 +330,7 @@ JSON_Install:BOOL=ON
 JSON_MultipleHeaders:BOOL=OFF
 
 //Path to a library.
-LIBVLCCORE_LIBRARY:FILEPATH=LIBVLCCORE_LIBRARY-NOTFOUND
+LIBVLCCORE_LIBRARY:FILEPATH=/usr/lib/libvlccore.so
 
 //Path to a file.
 LIBVLC_INCLUDE_DIR:PATH=/usr/include

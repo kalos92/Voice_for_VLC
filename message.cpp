@@ -49,7 +49,7 @@ Response &Response::operator=(const Response &other) {
     return *this;
 }
 
-const Status &Response::getStatus() const {
+const Result &Response::getResult() const {
     return status;
 }
 

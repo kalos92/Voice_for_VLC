@@ -25,14 +25,16 @@ class vlc_manager {
             Media *current_media = nullptr;
             int episode = 0 ;
             int season = 0;
-            bool paused = false;
         }Current_status;
 
 
         static void parse_json();
-        static Media *search_media_from_title_and_update_current_media(Current_status *cs, Message *msg);
-        static const std::string calculate_next_or_previous(Current_status *cs, Message *msg, bool next, Costants k);
-        static std::string calculate_what_to_play(Message *msg, const Media& media, Costants);
+        static Media *search_media_from_title_and_update_current_media(Current_status *, Message *);
+        static const std::string calculate_next_or_previous(Current_status *, Message *, bool, Costants);
+        static std::string calculate_what_to_play(Message *, const Media& , Costants);
+        static void save_current_status(Current_status, int64_t);
+        static std::pair<std::string, uint64_t > resume_from_save_state(Costants, Current_status *);
+        static Media *search_media_from_title(std::string title);
 };
 
 

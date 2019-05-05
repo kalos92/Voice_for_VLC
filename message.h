@@ -14,7 +14,7 @@ class Message {
     public:
         Message()= default;
 
-        Message(Command command, std::string path, std::string title, int season, int episode, double time) :
+        Message(Command command, std::string title, int season, int episode, double time) :
             command(command), title(std::move(title)), season(season), episode(episode), time(time){};
 
         ~Message()= default;
@@ -52,7 +52,7 @@ public:
 
     Response& operator=(const Response& other);
 
-    const Result &getStatus() const; //& return a const reference
+    const Result &getResult() const; //& return a const reference
 
     std::string getResponse() const;
 

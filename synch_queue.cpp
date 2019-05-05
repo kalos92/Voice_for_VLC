@@ -52,13 +52,13 @@ std::unique_ptr<Message> synch_queue::read_message() {
         std::cout << mex.getCommand() << std::endl;
         this->messages.pop_front();
 
-        if(mex.getCommand() == DESTROY) {
-            while (!messages.empty()) {
-                this->messages.pop_front();
-            }
-            this->is_running = false;
-        }
-        else
+//        if(mex.getCommand() == DESTROY) {
+//            while (!messages.empty()) {
+//                this->messages.pop_front();
+//            }
+//            this->is_running = false;
+//        }
+       // else
             std::cout << mex.getCommand() << std::endl;
 
         std::unique_ptr<Message> pointer( new Message(mex) );

@@ -3,33 +3,33 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Voice_for_VLC" targetName="NightlySubmit" />
-      <config projectName="Voice_for_VLC" targetName="NightlyTest" />
+      <config projectName="Voice_for_VLC" targetName="NightlyConfigure" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalTest" />
       <config projectName="Voice_for_VLC" targetName="ContinuousConfigure" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalMemCheck" />
       <config projectName="Voice_for_VLC" targetName="NightlyBuild" />
+      <config projectName="Voice_for_VLC" targetName="NightlyTest" />
       <config projectName="Voice_for_VLC" targetName="Nightly" />
-      <config projectName="Voice_for_VLC" targetName="ContinuousBuild" />
       <config projectName="Voice_for_VLC" targetName="ContinuousStart" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalCoverage" />
       <config projectName="Voice_for_VLC" targetName="ContinuousTest" />
-      <config projectName="Voice_for_VLC" targetName="NightlyConfigure" />
+      <config projectName="Voice_for_VLC" targetName="Continuous" />
       <config projectName="Voice_for_VLC" targetName="ContinuousMemCheck" />
       <config projectName="Voice_for_VLC" targetName="ContinuousSubmit" />
-      <config projectName="Voice_for_VLC" targetName="NightlyUpdate" />
       <config projectName="Voice_for_VLC" targetName="NightlyMemoryCheck" />
       <config projectName="Voice_for_VLC" targetName="ContinuousCoverage" />
       <config projectName="Voice_for_VLC" targetName="ContinuousUpdate" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalConfigure" />
       <config projectName="Voice_for_VLC" targetName="Experimental" />
-      <config projectName="Voice_for_VLC" targetName="Continuous" />
+      <config projectName="Voice_for_VLC" targetName="NightlyStart" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalBuild" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalStart" />
+      <config projectName="Voice_for_VLC" targetName="ContinuousBuild" />
       <config projectName="Voice_for_VLC" targetName="NightlyCoverage" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalSubmit" />
       <config projectName="Voice_for_VLC" targetName="NightlyMemCheck" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalUpdate" />
-      <config projectName="Voice_for_VLC" targetName="NightlyStart" />
+      <config projectName="Voice_for_VLC" targetName="NightlyUpdate" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -47,65 +47,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f427e07a-b3e0-43fa-a554-418543459357" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/NotFoundException.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/media.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/message.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/NotFoundException.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/NotRunningException.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/media.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/message.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/rest_server.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/synch_queue.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/google_assistant_for_vlc.dir/vlc_manager.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/google_assistant_for_vlc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/google_assistant_for_vlc.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/json/DartConfiguration.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/json/DartConfiguration.tcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/json/nlohmann_json.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/json/nlohmann_json.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Voice_for_VLC.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Voice_for_VLC.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/google_assistant_for_vlc.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Voice_for_VLC.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Voice_for_VLC.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/google_assistant_for_vlc.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/json/DartConfiguration.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/json/DartConfiguration.tcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/json/nlohmann_json.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/json/nlohmann_json.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/command.h" beforeDir="false" afterPath="$PROJECT_DIR$/command.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.json" beforeDir="false" afterPath="$PROJECT_DIR$/list.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/media.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.h" beforeDir="false" afterPath="$PROJECT_DIR$/media.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/message.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/message.h" beforeDir="false" afterPath="$PROJECT_DIR$/message.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/rest_server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.json" beforeDir="false" afterPath="$PROJECT_DIR$/save.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synch_queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/synch_queue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vlc_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vlc_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.h" afterDir="false" />
     </list>
@@ -120,14 +70,33 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/command.h">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-17">
+                    <caret line="62" selection-start-line="62" selection-end-line="62" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="402">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
               </folding>
@@ -136,10 +105,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/command.h">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
-              <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+            <state relative-caret-position="1977">
+              <caret line="174" selection-start-line="174" selection-end-line="174" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,32 +136,32 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/NotRunningException.h" />
-        <option value="$PROJECT_DIR$/synch_queue.cpp" />
         <option value="$PROJECT_DIR$/NotFoundException.h" />
         <option value="$PROJECT_DIR$/synch_queue.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/websocket_manager.cpp" />
         <option value="$PROJECT_DIR$/websocket_manager.h" />
-        <option value="$PROJECT_DIR$/rest_server.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rest_server.h" />
+        <option value="$PROJECT_DIR$/media.cpp" />
+        <option value="$PROJECT_DIR$/media.h" />
+        <option value="$PROJECT_DIR$/rest_server.cpp" />
+        <option value="$PROJECT_DIR$/synch_queue.cpp" />
+        <option value="$PROJECT_DIR$/command.h" />
+        <option value="$PROJECT_DIR$/vlc_manager.h" />
+        <option value="$PROJECT_DIR$/message.h" />
         <option value="$PROJECT_DIR$/message.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/media.cpp" />
-        <option value="$PROJECT_DIR$/vlc_manager.h" />
-        <option value="$PROJECT_DIR$/media.h" />
-        <option value="$PROJECT_DIR$/message.h" />
-        <option value="$PROJECT_DIR$/command.h" />
         <option value="$PROJECT_DIR$/vlc_manager.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="87" />
-    <option name="y" value="-4" />
-    <option name="width" value="1398" />
-    <option name="height" value="1020" />
+    <option name="x" value="1606" />
+    <option name="y" value="24" />
+    <option name="width" value="1215" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -371,7 +343,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Voice_for_VLC" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Voice_for_VLC" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 $USER_HOME$/media" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -444,11 +416,13 @@
       <workItem from="1556784903729" duration="1618000" />
       <workItem from="1556800040139" duration="3831000" />
       <workItem from="1556868837245" duration="11044000" />
+      <workItem from="1557050210889" duration="2690000" />
+      <workItem from="1557074780884" duration="8496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71087000" />
+    <option name="totallyTimeSpent" value="82273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,14 +434,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-11" width="1311" height="780" extended-state="6" />
+    <frame x="1344" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21140142" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14372581" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32925585" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,19 +471,34 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/vlc_manager.cpp</url>
-          <line>66</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/rest_server.cpp</url>
-          <line>108</line>
+          <line>100</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/vlc_manager.cpp</url>
-          <line>319</line>
-          <option name="timeStamp" value="57" />
+          <line>452</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>174</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/command.h</url>
+          <line>63</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vlc_manager.cpp</url>
+          <line>48</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/command.h</url>
+          <line>101</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -533,20 +523,6 @@
     <entry file="file://$PROJECT_DIR$/abc.cpp" />
     <entry file="file://$PROJECT_DIR$/abc.h" />
     <entry file="file://$PROJECT_DIR$/libvlcpp/vlcpp/common.hpp" />
-    <entry file="file:///usr/include/c++/5/tuple">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/unique_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="298" selection-start-line="298" selection-end-line="298" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/move.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -561,21 +537,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/functional">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1531" selection-start-line="1531" selection-end-line="1531" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/single_include/nlohmann/json.hpp" />
-    <entry file="file:///usr/include/c++/5/bits/stl_iterator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11355">
-          <caret line="757" selection-start-line="757" selection-end-line="757" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NotRunningException.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -598,16 +560,6 @@
           <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
             <element signature="e#135#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synch_queue.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,33 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="44" column="20" lean-forward="true" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-          <folding>
-            <element signature="e#124#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest_server.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -674,54 +599,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest_server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/list.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.cpp">
+    <entry file="file://$PROJECT_DIR$/media.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="660">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
           <folding>
-            <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#40#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.h">
+    <entry file="file://$PROJECT_DIR$/rest_server.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+        <state relative-caret-position="915">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="1531" selection-start-line="1531" selection-end-line="1531" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synch_queue.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vlc_manager.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="441">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding>
             <element signature="e#135#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/message.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/ext/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="490" selection-start-line="490" selection-end-line="490" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="1226" selection-start-line="1226" selection-end-line="1226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_uninitialized.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_iterator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="843" selection-start-line="843" selection-end-line="843" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#124#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1977">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/tuple">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="304" selection-start-line="304" selection-end-line="304" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/command.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+        <state relative-caret-position="-17">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="402">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
           <folding>
             <element signature="e#40#64#0" expanded="true" />
           </folding>

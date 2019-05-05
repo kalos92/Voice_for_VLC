@@ -57,17 +57,9 @@ void rest_server::handle_get(const http_request& message)
 
     if(!paths.empty()){
         if(paths[0] == "list_film"){
-            std::cout << getenv("USER") << std::endl;
-            sq = synch_queue::get_instance();
-            std::string path;
-            path.append(path_series);
-            path.append("/series/a/1/aS1E1.mp4");
 
-            std::unique_ptr<Response> res;
-            Message m(PLAY, path, "a", 1, 1, 0); //microsecondi
-            sq->write_message(m);
-            res = sq->read_response();
-            std::cout << res->getResponse() << std::endl;
+
+
 
 //            concurrency::streams::fstream::open_istream(U("list.json"), std::ios::in).then([=](concurrency::streams::istream is)
 //               {

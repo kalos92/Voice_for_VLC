@@ -8,11 +8,17 @@
 #include "rest_server.h"
 
 
+
 int main(int argc, char ** argv) {
 
 
     std::string address;
     std::string path;
+
+    if (argc == 1){
+        std::cout << "Not enough params, please relaunch with --help" << std::endl;
+        return -1;
+    }
 
     if(strcasecmp(argv[1],"--help") == 0){
         std::cout << "VfV is a simple application that allow to command vlc from IFTTT, read the README file" <<
@@ -26,32 +32,43 @@ int main(int argc, char ** argv) {
 
     if(argc != 3){
         std::cout << "Not enough params, please relaunch with --help" << std::endl;
+        return -1;
     }
 
-    synch_queue *sq;
+    synch_queue *sq = nullptr;
     Costants k(argv[1], argv[2]);
     std::thread vlc(&vlc_manager::controller , k);
-    rest_server restServer;
+    sq = synch_queue::get_instance();
+    //rest_server restServer;
 
-    //    sleep (5);
-//    Message m2(PREVIOUS, "", "", 0, 0, 0);
-//    sq->write_message(m2);
-//    res = sq->read_response();
-//    std::cout << res->getResponse() << std::endl;
+
+    std::unique_ptr<Response> res;
+    Message m(FF, "", 0, 0, 0); //microsecondi
+    sq->write_message(m);
+    res = sq->read_response();
+    std::cout << res->getResponse() << std::endl;
+
+    /*int i = random()%15+2;
+    std::cout << std::to_string(i) << std::endl;
+    sleep (i);*/
+    Message m2(PLAY, "a", 0, 4, 0);
+    sq->write_message(m2);
+    res = sq->read_response();
+    std::cout << res->getResponse() << std::endl;
 //
+
+    sleep (5);
+    Message m3(PLAY, "a",  0, 2, 0);
+    sq->write_message(m3);
+    res = sq->read_response();
+    std::cout << res->getResponse() << std::endl;
 //
-//    sleep (5);
-//    Message m3(NEXT, "", "", 0, 0, 0);
-//    sq->write_message(m3);
-//    res = sq->read_response();
-//    std::cout << res->getResponse() << std::endl;
-//
-//    sleep (5);
-//    Message m4(FF, "", "", 0, 0, 38000);
-//    sq->write_message(m4);
-//    res = sq->read_response();
-//    std::cout << res->getResponse() << std::endl;
-//
+    sleep (5);
+    Message m4(STOP, "", 0, 0, 0);
+    sq->write_message(m4);
+    res = sq->read_response();
+    std::cout << res->getResponse() << std::endl;
+
 //    sleep (5);
 //    Message m5(REW, "", "", 0, 0, 500);
 //    sq->write_message(m5);
@@ -156,7 +173,6 @@ int main(int argc, char ** argv) {
 
 
     vlc.join();
-    delete(cost);
 
     return 0;
 }

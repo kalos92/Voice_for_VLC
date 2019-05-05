@@ -6,23 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/kalos/CLionProjects/Voice_for_VLC/NotFoundException.cpp
-NotFoundException.h
-/home/kalos/CLionProjects/Voice_for_VLC/NotFoundException.h
-
 /home/kalos/CLionProjects/Voice_for_VLC/NotFoundException.h
 exception
 -
-
-/home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.cpp
-NotRunningException.h
-/home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.h
 
 /home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.h
 exception
 -
 
 /home/kalos/CLionProjects/Voice_for_VLC/command.h
+utility
+-
 
 /home/kalos/CLionProjects/Voice_for_VLC/json/single_include/nlohmann/json.hpp
 algorithm
@@ -352,41 +346,11 @@ limits
 type_traits
 -
 
-/home/kalos/CLionProjects/Voice_for_VLC/main.cpp
-iostream
--
-synch_queue.h
-/home/kalos/CLionProjects/Voice_for_VLC/synch_queue.h
-message.h
-/home/kalos/CLionProjects/Voice_for_VLC/message.h
-iostream
--
-unistd.h
--
-cstring
--
-vlc_manager.h
-/home/kalos/CLionProjects/Voice_for_VLC/vlc_manager.h
-rest_server.h
-/home/kalos/CLionProjects/Voice_for_VLC/rest_server.h
-
-/home/kalos/CLionProjects/Voice_for_VLC/media.cpp
-cstring
--
-media.h
-/home/kalos/CLionProjects/Voice_for_VLC/media.h
-
 /home/kalos/CLionProjects/Voice_for_VLC/media.h
 string
 -
 vector
 -
-
-/home/kalos/CLionProjects/Voice_for_VLC/message.cpp
-iostream
--
-message.h
-/home/kalos/CLionProjects/Voice_for_VLC/message.h
 
 /home/kalos/CLionProjects/Voice_for_VLC/message.h
 arpa/nameser.h
@@ -395,42 +359,6 @@ string
 -
 command.h
 /home/kalos/CLionProjects/Voice_for_VLC/command.h
-
-/home/kalos/CLionProjects/Voice_for_VLC/rest_server.cpp
-rest_server.h
-/home/kalos/CLionProjects/Voice_for_VLC/rest_server.h
-
-/home/kalos/CLionProjects/Voice_for_VLC/rest_server.h
-cpprest/http_listener.h
--
-cpprest/asyncrt_utils.h
--
-cpprest/json.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/json.h
-cpprest/http_listener.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/http_listener.h
-cpprest/uri.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/uri.h
-cpprest/asyncrt_utils.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/asyncrt_utils.h
-cpprest/json.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/json.h
-cpprest/filestream.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/filestream.h
-cpprest/containerstream.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/containerstream.h
-cpprest/producerconsumerstream.h
-/home/kalos/CLionProjects/Voice_for_VLC/cpprest/producerconsumerstream.h
-synch_queue.h
-/home/kalos/CLionProjects/Voice_for_VLC/synch_queue.h
-
-/home/kalos/CLionProjects/Voice_for_VLC/synch_queue.cpp
-synch_queue.h
-/home/kalos/CLionProjects/Voice_for_VLC/synch_queue.h
-NotRunningException.h
-/home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.h
-mutex
--
 
 /home/kalos/CLionProjects/Voice_for_VLC/synch_queue.h
 iostream
@@ -462,6 +390,8 @@ NotRunningException.h
 NotFoundException.h
 /home/kalos/CLionProjects/Voice_for_VLC/NotFoundException.h
 algorithm
+-
+iomanip
 -
 
 /home/kalos/CLionProjects/Voice_for_VLC/vlc_manager.h
