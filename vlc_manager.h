@@ -29,12 +29,12 @@ class vlc_manager {
 
 
         static void parse_json();
-        static Media *search_media_from_title_and_update_current_media(Current_status *, Message *);
-        static const std::string calculate_next_or_previous(Current_status *, Message *, bool, Costants);
-        static std::string calculate_what_to_play(Message *, const Media& , Costants);
+        static const std::string calculate_next_or_previous(Current_status *cs, bool next, const Costants &k);
+        static std::string calculate_what_to_play(Current_status *, Message *, const Media& , const Costants&);
         static void save_current_status(Current_status, int64_t);
-        static std::pair<std::string, uint64_t > resume_from_save_state(Costants, Current_status *);
+        static std::pair<std::string, uint64_t > resume_from_save_state(const Costants&, Current_status *);
         static Media *search_media_from_title(std::string title);
+        static std::pair<std::string, int64_t> convert_to_ms(const std::pair<std::string, int64_t>& pair);
 };
 
 

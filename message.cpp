@@ -22,7 +22,7 @@ int Message::getEpisode() const {
     return episode;
 }
 
-double Message::getTime() const {
+std::pair<std::string, int64_t> Message::getTime() const {
     return time;
 }
 

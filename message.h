@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by kalos on 25/04/19.
 //
@@ -14,8 +16,8 @@ class Message {
     public:
         Message()= default;
 
-        Message(Command command, std::string title, int season, int episode, double time) :
-            command(command), title(std::move(title)), season(season), episode(episode), time(time){};
+        Message(Command command, std::string title, int season, int episode, std::pair<std::string, int64_t> time) :
+            command(command), title(std::move(title)), season(season), episode(episode), time(std::move(time)){};
 
         ~Message()= default;
 
@@ -29,7 +31,7 @@ class Message {
 
         int getEpisode() const;
 
-        double getTime() const;
+        std::pair<std::string, int64_t> getTime() const;
 
 
     private:
@@ -37,7 +39,7 @@ class Message {
         std::string title;
         int season;
         int episode;
-        double time;
+        std::pair<std::string, int64_t> time;
 
 };
 

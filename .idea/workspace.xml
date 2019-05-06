@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Voice_for_VLC" targetName="NightlySubmit" />
+      <config projectName="Voice_for_VLC" targetName="ExperimentalBuild" />
       <config projectName="Voice_for_VLC" targetName="NightlyConfigure" />
-      <config projectName="Voice_for_VLC" targetName="ExperimentalTest" />
+      <config projectName="Voice_for_VLC" targetName="NightlyMemCheck" />
+      <config projectName="Voice_for_VLC" targetName="ContinuousUpdate" />
       <config projectName="Voice_for_VLC" targetName="ContinuousConfigure" />
-      <config projectName="Voice_for_VLC" targetName="ExperimentalMemCheck" />
       <config projectName="Voice_for_VLC" targetName="NightlyBuild" />
       <config projectName="Voice_for_VLC" targetName="NightlyTest" />
       <config projectName="Voice_for_VLC" targetName="Nightly" />
@@ -15,20 +15,20 @@
       <config projectName="Voice_for_VLC" targetName="ContinuousTest" />
       <config projectName="Voice_for_VLC" targetName="Continuous" />
       <config projectName="Voice_for_VLC" targetName="ContinuousMemCheck" />
-      <config projectName="Voice_for_VLC" targetName="ContinuousSubmit" />
-      <config projectName="Voice_for_VLC" targetName="NightlyMemoryCheck" />
+      <config projectName="Voice_for_VLC" targetName="ExperimentalUpdate" />
+      <config projectName="Voice_for_VLC" targetName="ExperimentalStart" />
+      <config projectName="Voice_for_VLC" targetName="ExperimentalMemCheck" />
       <config projectName="Voice_for_VLC" targetName="ContinuousCoverage" />
-      <config projectName="Voice_for_VLC" targetName="ContinuousUpdate" />
+      <config projectName="Voice_for_VLC" targetName="ContinuousSubmit" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalConfigure" />
       <config projectName="Voice_for_VLC" targetName="Experimental" />
-      <config projectName="Voice_for_VLC" targetName="NightlyStart" />
-      <config projectName="Voice_for_VLC" targetName="ExperimentalBuild" />
-      <config projectName="Voice_for_VLC" targetName="ExperimentalStart" />
+      <config projectName="Voice_for_VLC" targetName="NightlyMemoryCheck" />
+      <config projectName="Voice_for_VLC" targetName="ExperimentalTest" />
       <config projectName="Voice_for_VLC" targetName="ContinuousBuild" />
       <config projectName="Voice_for_VLC" targetName="NightlyCoverage" />
       <config projectName="Voice_for_VLC" targetName="ExperimentalSubmit" />
-      <config projectName="Voice_for_VLC" targetName="NightlyMemCheck" />
-      <config projectName="Voice_for_VLC" targetName="ExperimentalUpdate" />
+      <config projectName="Voice_for_VLC" targetName="NightlyStart" />
+      <config projectName="Voice_for_VLC" targetName="NightlySubmit" />
       <config projectName="Voice_for_VLC" targetName="NightlyUpdate" />
     </generated>
   </component>
@@ -46,13 +46,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f427e07a-b3e0-43fa-a554-418543459357" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/command.h" beforeDir="false" afterPath="$PROJECT_DIR$/command.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json" beforeDir="false" afterPath="$PROJECT_DIR$/json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/include/nlohmann/detail/input/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/include/nlohmann/detail/input/lexer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/include/nlohmann/detail/output/serializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/include/nlohmann/detail/output/serializer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/single_include/nlohmann/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/single_include/nlohmann/json.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/test/src/unit-class_parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/json/test/src/unit-class_parser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/message.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.h" beforeDir="false" afterPath="$PROJECT_DIR$/message.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vlc_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlc_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/vlc_manager.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -65,33 +63,14 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/command.h">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1105">
-                    <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="184" column="101" selection-start-line="184" selection-start-column="101" selection-end-line="184" selection-end-column="101" />
+            <state relative-caret-position="150">
+              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
               </folding>
@@ -100,10 +79,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vlc_manager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+              <folding>
+                <element signature="e#135#159#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+            <state relative-caret-position="1335">
+              <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -142,21 +154,21 @@
         <option value="$PROJECT_DIR$/media.h" />
         <option value="$PROJECT_DIR$/rest_server.cpp" />
         <option value="$PROJECT_DIR$/synch_queue.cpp" />
-        <option value="$PROJECT_DIR$/vlc_manager.h" />
-        <option value="$PROJECT_DIR$/message.h" />
-        <option value="$PROJECT_DIR$/message.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/command.h" />
+        <option value="$PROJECT_DIR$/message.h" />
+        <option value="$PROJECT_DIR$/message.cpp" />
+        <option value="$PROJECT_DIR$/vlc_manager.h" />
         <option value="$PROJECT_DIR$/vlc_manager.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1606" />
-    <option name="y" value="24" />
-    <option name="width" value="1215" />
-    <option name="height" value="1000" />
+    <option name="x" value="56" />
+    <option name="y" value="-11" />
+    <option name="width" value="1311" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,7 +195,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug/Voice_for_VLC" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -413,11 +425,12 @@
       <workItem from="1556868837245" duration="11044000" />
       <workItem from="1557050210889" duration="2690000" />
       <workItem from="1557074780884" duration="9865000" />
+      <workItem from="1557127529182" duration="5411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83642000" />
+    <option name="totallyTimeSpent" value="89053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,14 +442,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1344" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="56" y="-11" width="1311" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14372581" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14568488" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3282365" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32735425" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -457,6 +470,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/libvlcpp" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -467,32 +485,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/rest_server.cpp</url>
-          <line>100</line>
+          <line>92</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/vlc_manager.cpp</url>
-          <line>452</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>180</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/command.h</url>
-          <line>63</line>
+          <line>65</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/vlc_manager.cpp</url>
-          <line>48</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/command.h</url>
-          <line>101</line>
+          <line>141</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
@@ -631,33 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vlc_manager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#135#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/allocator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -740,28 +716,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        <state relative-caret-position="1335">
+          <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
+    <entry file="file://$PROJECT_DIR$/command.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="184" column="101" selection-start-line="184" selection-start-column="101" selection-end-line="184" selection-end-column="101" />
+        <state relative-caret-position="419">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
-            <element signature="e#40#64#0" expanded="true" />
+            <element signature="e#40#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/command.h">
+    <entry file="file://$PROJECT_DIR$/vlc_manager.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+        <state relative-caret-position="372">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="e#135#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vlc_manager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
