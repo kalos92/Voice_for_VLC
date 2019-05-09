@@ -16,6 +16,7 @@
 #include "cpprest/containerstream.h"
 #include "cpprest/producerconsumerstream.h"
 #include "synch_queue.h"
+#include "TextOperation.h"
 
 using namespace std;
 using namespace web;
@@ -39,6 +40,7 @@ class rest_server {
         synch_queue *sq;
         pplx::task<void>open(){return server_listener->open();}
         pplx::task<void>close(){return server_listener->close();}
+
 
 };
 

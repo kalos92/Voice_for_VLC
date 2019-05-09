@@ -8,8 +8,8 @@
 
 #include <exception>
 class NotRunningException: public std::exception {
-
-    const char * what () const noexcept override {
+public:
+    const char * what () const throw (){
         return "Synch Queue was stopped";
     }
 

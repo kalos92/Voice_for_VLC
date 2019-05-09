@@ -587,6 +587,60 @@ NotRunningException.cpp.s:
 	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.s
 .PHONY : NotRunningException.cpp.s
 
+NotValidURL.o: NotValidURL.cpp.o
+
+.PHONY : NotValidURL.o
+
+# target to build an object file
+NotValidURL.cpp.o:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o
+.PHONY : NotValidURL.cpp.o
+
+NotValidURL.i: NotValidURL.cpp.i
+
+.PHONY : NotValidURL.i
+
+# target to preprocess a source file
+NotValidURL.cpp.i:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.i
+.PHONY : NotValidURL.cpp.i
+
+NotValidURL.s: NotValidURL.cpp.s
+
+.PHONY : NotValidURL.s
+
+# target to generate assembly for a file
+NotValidURL.cpp.s:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.s
+.PHONY : NotValidURL.cpp.s
+
+TextOperation.o: TextOperation.cpp.o
+
+.PHONY : TextOperation.o
+
+# target to build an object file
+TextOperation.cpp.o:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o
+.PHONY : TextOperation.cpp.o
+
+TextOperation.i: TextOperation.cpp.i
+
+.PHONY : TextOperation.i
+
+# target to preprocess a source file
+TextOperation.cpp.i:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.i
+.PHONY : TextOperation.cpp.i
+
+TextOperation.s: TextOperation.cpp.s
+
+.PHONY : TextOperation.s
+
+# target to generate assembly for a file
+TextOperation.cpp.s:
+	$(MAKE) -f CMakeFiles/Voice_for_VLC.dir/build.make CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.s
+.PHONY : TextOperation.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -796,6 +850,12 @@ help:
 	@echo "... NotRunningException.o"
 	@echo "... NotRunningException.i"
 	@echo "... NotRunningException.s"
+	@echo "... NotValidURL.o"
+	@echo "... NotValidURL.i"
+	@echo "... NotValidURL.s"
+	@echo "... TextOperation.o"
+	@echo "... TextOperation.i"
+	@echo "... TextOperation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -7,6 +7,14 @@ CMakeFiles/Voice_for_VLC.dir/NotFoundException.cpp.o: ../NotFoundException.h
 CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o: ../NotRunningException.cpp
 CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o: ../NotRunningException.h
 
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o: ../NotFoundException.h
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o: ../NotValidURL.cpp
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o: ../NotValidURL.h
+
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o: ../TextOperation.cpp
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o: ../TextOperation.h
+
+CMakeFiles/Voice_for_VLC.dir/main.cpp.o: ../TextOperation.h
 CMakeFiles/Voice_for_VLC.dir/main.cpp.o: ../command.h
 CMakeFiles/Voice_for_VLC.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Voice_for_VLC.dir/main.cpp.o: ../media.h
@@ -18,10 +26,15 @@ CMakeFiles/Voice_for_VLC.dir/main.cpp.o: ../vlc_manager.h
 CMakeFiles/Voice_for_VLC.dir/media.cpp.o: ../media.cpp
 CMakeFiles/Voice_for_VLC.dir/media.cpp.o: ../media.h
 
+CMakeFiles/Voice_for_VLC.dir/message.cpp.o: ../TextOperation.h
 CMakeFiles/Voice_for_VLC.dir/message.cpp.o: ../command.h
 CMakeFiles/Voice_for_VLC.dir/message.cpp.o: ../message.cpp
 CMakeFiles/Voice_for_VLC.dir/message.cpp.o: ../message.h
 
+CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../NotFoundException.h
+CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../NotRunningException.h
+CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../NotValidURL.h
+CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../TextOperation.h
 CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../command.h
 CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../message.h
 CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../rest_server.cpp
@@ -29,6 +42,7 @@ CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../rest_server.h
 CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o: ../synch_queue.h
 
 CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../NotRunningException.h
+CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../TextOperation.h
 CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../command.h
 CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../message.h
 CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../synch_queue.cpp
@@ -36,6 +50,7 @@ CMakeFiles/Voice_for_VLC.dir/synch_queue.cpp.o: ../synch_queue.h
 
 CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../NotFoundException.h
 CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../NotRunningException.h
+CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../TextOperation.h
 CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../command.h
 CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../json/single_include/nlohmann/json.hpp
 CMakeFiles/Voice_for_VLC.dir/vlc_manager.cpp.o: ../media.h

@@ -8,8 +8,9 @@
 
 #include <exception>
 class NotFoundException: public std::exception {
+public:
 
-    const char * what () const noexcept override {
+    const char * what () const throw (){
         return "Requested media cannot be found";
     }
 

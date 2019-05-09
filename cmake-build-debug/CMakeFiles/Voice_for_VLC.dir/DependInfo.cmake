@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kalos/CLionProjects/Voice_for_VLC/NotFoundException.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/NotFoundException.cpp.o"
   "/home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o"
+  "/home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o"
+  "/home/kalos/CLionProjects/Voice_for_VLC/TextOperation.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o"
   "/home/kalos/CLionProjects/Voice_for_VLC/main.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/main.cpp.o"
   "/home/kalos/CLionProjects/Voice_for_VLC/media.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/media.cpp.o"
   "/home/kalos/CLionProjects/Voice_for_VLC/message.cpp" "/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles/Voice_for_VLC.dir/message.cpp.o"

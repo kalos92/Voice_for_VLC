@@ -168,6 +168,18 @@
 		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/NotRunningException.h">
 			<Option target="Voice_for_VLC"/>
 		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.cpp">
+			<Option target="Voice_for_VLC"/>
+		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.h">
+			<Option target="Voice_for_VLC"/>
+		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/TextOperation.cpp">
+			<Option target="Voice_for_VLC"/>
+		</Unit>
+		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/TextOperation.h">
+			<Option target="Voice_for_VLC"/>
+		</Unit>
 		<Unit filename="/home/kalos/CLionProjects/Voice_for_VLC/main.cpp">
 			<Option target="Voice_for_VLC"/>
 		</Unit>

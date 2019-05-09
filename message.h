@@ -39,7 +39,7 @@ class Message {
         std::string title;
         int season;
         int episode;
-        std::pair<std::string, int64_t> time;
+        std::pair<std::string, int64_t> time;  //<[hours minutes seconds none, time]
 
 };
 

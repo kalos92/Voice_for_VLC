@@ -43,7 +43,7 @@ ELSE (LIBVLC_FOUND)
     ENDIF (LIBVLC_FIND_REQUIRED)
 ENDIF (LIBVLC_FOUND)
 FIND_PATH(LIBVLC_INCLUDE_DIR PATHS "${CMAKE_INCLUDE_PATH}/vlc" NAMES vlc.h)
-add_executable(Voice_for_VLC main.cpp message.cpp message.h synch_queue.cpp synch_queue.h vlc_manager.cpp vlc_manager.h NotRunningException.cpp NotRunningException.h media.cpp media.h NotFoundException.cpp NotFoundException.h rest_server.cpp rest_server.h)
+add_executable(Voice_for_VLC main.cpp message.cpp message.h synch_queue.cpp synch_queue.h vlc_manager.cpp vlc_manager.h NotRunningException.cpp NotRunningException.h media.cpp media.h NotFoundException.cpp NotFoundException.h rest_server.cpp rest_server.h TextOperation.cpp TextOperation.h NotValidURL.cpp NotValidURL.h)
 
 set(CMAKE_CXX_FLAGS "-pthread")
 set(JSON_BuildTests OFF CACHE INTERNAL "")

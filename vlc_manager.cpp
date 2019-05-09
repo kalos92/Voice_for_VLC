@@ -92,7 +92,7 @@ void vlc_manager::controller(const Costants& k) {
                         libvlc_media_player_play(cs.mp);
 
                         //set the volume for debugging reason to 0
-                        libvlc_audio_set_volume(cs.mp, 0);
+                        libvlc_audio_set_volume(cs.mp, 50);
 
                         //go to fullscreen
                         libvlc_set_fullscreen(cs.mp, true);
@@ -289,10 +289,9 @@ void vlc_manager::controller(const Costants& k) {
 
 
             }
-            catch (...) {
+            catch (const NotFoundException &nfe) {
                 //An exception has been caught write an error response
-                Response res(ERROR, "Command " + State_Machine::command_to_string(msg->getCommand()) + " Failed"+"\n" +
-                libvlc_errmsg());
+                Response res(ERROR, "Command " + State_Machine::command_to_string(msg->getCommand()) + " Failed"+"\n");
 
                 //if any error set to to S_STOP status
                 State_Machine::change_status(state, STOP);
@@ -575,6 +574,9 @@ std::pair<std::string, int64_t> vlc_manager::convert_to_ms(const std::pair<std::
 
      if(pair.first == "hours")
          return std::make_pair("seconds", pair.second*60*60*1000);
+
+     if(pair.first == "none")
+         return pair;
 }
 
 

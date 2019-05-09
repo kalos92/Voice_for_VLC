@@ -161,6 +161,32 @@ CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalos/CLionProjects/Voice_for_VLC/rest_server.cpp -o CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.s
 
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o: CMakeFiles/Voice_for_VLC.dir/flags.make
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o: ../TextOperation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o -c /home/kalos/CLionProjects/Voice_for_VLC/TextOperation.cpp
+
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalos/CLionProjects/Voice_for_VLC/TextOperation.cpp > CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.i
+
+CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalos/CLionProjects/Voice_for_VLC/TextOperation.cpp -o CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.s
+
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o: CMakeFiles/Voice_for_VLC.dir/flags.make
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o: ../NotValidURL.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o -c /home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.cpp
+
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.cpp > CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.i
+
+CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalos/CLionProjects/Voice_for_VLC/NotValidURL.cpp -o CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.s
+
 # Object files for target Voice_for_VLC
 Voice_for_VLC_OBJECTS = \
 "CMakeFiles/Voice_for_VLC.dir/main.cpp.o" \
@@ -170,7 +196,9 @@ Voice_for_VLC_OBJECTS = \
 "CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o" \
 "CMakeFiles/Voice_for_VLC.dir/media.cpp.o" \
 "CMakeFiles/Voice_for_VLC.dir/NotFoundException.cpp.o" \
-"CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o"
+"CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o" \
+"CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o" \
+"CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o"
 
 # External object files for target Voice_for_VLC
 Voice_for_VLC_EXTERNAL_OBJECTS =
@@ -183,6 +211,8 @@ Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/NotRunningException.cpp.o
 Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/media.cpp.o
 Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/NotFoundException.cpp.o
 Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/rest_server.cpp.o
+Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/TextOperation.cpp.o
+Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/NotValidURL.cpp.o
 Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/build.make
 Voice_for_VLC: /usr/lib/libvlc.so
 Voice_for_VLC: /usr/lib/x86_64-linux-gnu/libcpprest.so
@@ -198,7 +228,7 @@ Voice_for_VLC: /usr/lib/x86_64-linux-gnu/libssl.so
 Voice_for_VLC: /usr/lib/x86_64-linux-gnu/libboost_system.so
 Voice_for_VLC: /usr/lib/x86_64-linux-gnu/libcrypto.so
 Voice_for_VLC: CMakeFiles/Voice_for_VLC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Voice_for_VLC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kalos/CLionProjects/Voice_for_VLC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Voice_for_VLC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Voice_for_VLC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

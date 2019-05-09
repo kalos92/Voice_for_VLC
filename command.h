@@ -1,4 +1,6 @@
 #include <utility>
+#include <algorithm>
+#include "TextOperation.h"
 
 //
 // Created by kalos on 25/04/19.
@@ -138,6 +140,43 @@ public:
         }
 
     }
+
+    static Command string_to_command(const std::string& command) {
+
+
+
+        if (command == "PLAY")
+            return PLAY;
+
+        if (command == "PAUSE")
+            return PAUSE;
+
+        if (command == "STOP")
+            return STOP;
+
+        if (command == "NEXT")
+            return NEXT;
+
+        if (command == "PREVIOUS")
+            return PREVIOUS;
+
+        if (command == "DESTROY")
+            return DESTROY;
+
+        if (command == "TIME")
+            return TIME;
+
+        if (command == "PERCENTAGE")
+            return PERCENTAGE;
+
+        if (command == "RESUME")
+            return RESUME;
+
+        if (command == "RESTART")
+            return RESTART;
+
+    }
+
 };
 
 
