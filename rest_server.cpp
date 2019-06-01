@@ -10,7 +10,7 @@ rest_server::rest_server()
 {
 
     utility::string_t port = U("50000");
-    utility::string_t address = U("http://192.168.1.120:");
+    utility::string_t address = U("http://192.168.1.110:");
     address.append(port);
 
     uri_builder uri(address);
@@ -66,9 +66,10 @@ void rest_server::handle_get(const http_request& message) {
 
             if (paths[0] == "api") {
 
-                if (paths.size() > 2) {
+                if (paths.size() >= 2) {
                     std::unique_ptr<Response> res;
 
+                    std::cout << State_Machine::string_to_command(paths[1]) << std::endl;
                     if (State_Machine::string_to_command(paths[1]) == PLAY) {
 
                         if (paths.size() == 5) {
@@ -125,6 +126,7 @@ void rest_server::handle_get(const http_request& message) {
                     }
 
                     if (State_Machine::string_to_command(paths[1]) == NEXT) {
+                        std::cout << "sonqui" << std::endl;
                         Message m(NEXT, "", 0, 0, std::make_pair("none", 0));
                         sq->write_message(m);
                         res = sq->read_response();

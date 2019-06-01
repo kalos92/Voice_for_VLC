@@ -72,6 +72,9 @@ void vlc_manager::controller(const Costants& k) {
                         if (media == nullptr)
                             throw NotFoundException();
 
+                        //insert media into the current status
+                        cs.current_media = media;
+
                         //calculate where is this media
                         std::string episode_path = vlc_manager::calculate_what_to_play(&cs, msg.get(), media, k);
 
@@ -92,7 +95,7 @@ void vlc_manager::controller(const Costants& k) {
                         libvlc_media_player_play(cs.mp);
 
                         //set the volume for debugging reason to 0
-                        libvlc_audio_set_volume(cs.mp, 50);
+                        libvlc_audio_set_volume(cs.mp, 100);
 
                         //go to fullscreen
                         libvlc_set_fullscreen(cs.mp, true);
@@ -158,7 +161,10 @@ void vlc_manager::controller(const Costants& k) {
                         libvlc_media_player_play(cs.mp);
 
                         //debugging
-                        libvlc_audio_set_volume(cs.mp, 0);
+                        //libvlc_audio_set_volume(cs.mp, 0);
+
+                        //go to fullscreen
+                        libvlc_set_fullscreen(cs.mp, true);
 
                         //Create a success response
                         Response res(SUCCESS, "Next video is played");
@@ -183,7 +189,10 @@ void vlc_manager::controller(const Costants& k) {
 
                         libvlc_media_player_play(cs.mp);
 
-                        libvlc_audio_set_volume(cs.mp, 0);
+                        //libvlc_audio_set_volume(cs.mp, 0);
+
+                        //go to fullscreen
+                        libvlc_set_fullscreen(cs.mp, true);
 
                         Response res(SUCCESS, "Previous video is played");
 
@@ -274,7 +283,7 @@ void vlc_manager::controller(const Costants& k) {
                         libvlc_media_player_set_time(cs.mp, details.second);
 
                         //set the volume for debugging reason to 0
-                        libvlc_audio_set_volume(cs.mp, 0);
+                        //libvlc_audio_set_volume(cs.mp, 0);
 
                         //go to fullscreen
                         libvlc_set_fullscreen(cs.mp, true);

@@ -2,8 +2,8 @@
 	"media":
 		[
 		{
-		 "title":"SailorMoon",
-		 "path":"Sailor_moon",
+		 "title":"Sailor",
+		 "path":"Sailor",
 		 "format": ".avi",
 		 "episodes" : 30,
 			"seasons":
@@ -24,13 +24,13 @@
 			]
 		},
 		{
-		"title":"a",
-		"path":"a",
-		"format":".mp4",
-		"episodes" : 4,
+		"title":"Gumball",
+		"path":"Gumball",
+		"format":".avi",
+		"episodes" : 14,
 			"seasons":
 			[
-			{"season":1,"episodes":3},
+			{"season":1,"episodes":2},
 			{"season":2,"episodes":1}
 			]
 		}
