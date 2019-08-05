@@ -1,0 +1,40 @@
+{
+    "media":
+    [
+        {
+            "title":"Sailor",
+            "path":"Sailor",
+            "format": ".avi",
+            "episodes" : 30,
+            "seasons":
+            [
+                {"season":1, "episodes":15},
+                {"season":2, "episodes":15}
+            ]
+        },
+        {
+            "title":"Digimon",
+            "path":"Digimon",
+            "format":".avi",
+            "episodes" : 36,
+            "seasons":
+            [
+                {"season":1, "episodes":16},
+                {"season":2, "episodes":20}
+            ]
+        },
+        {
+            "title":"Gumball",
+            "path":"Gumball",
+            "format":".avi",
+            "episodes" : 14,
+            "seasons":
+            [
+                {"season":1,"episodes":2},
+                {"season":2,"episodes":1}
+            ]
+        }
+        
+        
+    ]
+    }
