@@ -2,8 +2,8 @@
 // Created by kalos on 25/04/19.
 //
 
-#ifndef GOOGLE_ASSISTANT_FOR_VLC_SYNCH_QUEUE_H
-#define GOOGLE_ASSISTANT_FOR_VLC_SYNCH_QUEUE_H
+#ifndef VOICE_FOR_VLC_CONCURRENTQUEUE_H
+#define VOICE_FOR_VLC_CONCURRENTQUEUE_H
 
 #include <iostream>
 #include <thread>

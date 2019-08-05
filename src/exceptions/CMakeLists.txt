@@ -1,4 +1,4 @@
-add_library(
+add_executable(
         NotFoundException.cpp
         NotFoundException.h
         NotRunningException.cpp

@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(Voice_for_VLC)
+project(Voice_for_VLC CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
 find_library(CPPREST_LIB cpprest)
 find_package(OpenSSL 1.0.0 REQUIRED)
+
 FIND_PATH(LIBVLC_INCLUDE_DIR vlc/vlc.h
         HINTS "$ENV{LIBVLC_INCLUDE_PATH}"
         PATHS
@@ -48,10 +49,9 @@ add_subdirectory(src/network)
 add_subdirectory(src/player)
 add_subdirectory(src/synchronization)
 add_subdirectory(src/utils)
+add_subdirectory(src/database)
 
-
-add_executable(
-        Voice_for_VLC src/Main.cpp)
+add_executable(Voice_for_VLC src/Main.cpp)
 
 set(CMAKE_CXX_FLAGS "-pthread")
 set(JSON_BuildTests OFF CACHE INTERNAL "")

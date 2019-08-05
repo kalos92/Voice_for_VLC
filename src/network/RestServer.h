@@ -15,8 +15,8 @@
 #include "cpprest/filestream.h"
 #include "cpprest/containerstream.h"
 #include "cpprest/producerconsumerstream.h"
-#include "synch_queue.h"
-#include "TextOperation.h"
+#include "../synchronization/ConcurrentQueue.h"
+#include "../utils/TextOperation.h"
 
 using namespace std;
 using namespace web;

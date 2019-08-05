@@ -2,8 +2,8 @@
 // Created by kalos on 26/04/19.
 //
 
-#ifndef GOOGLE_ASSISTANT_FOR_VLC_MEDIA_H
-#define GOOGLE_ASSISTANT_FOR_VLC_MEDIA_H
+#ifndef VOICE_FOR_VLC_MEDIA_H
+#define VOICE_FOR_VLC_MEDIA_H
 
 
 #include <string>

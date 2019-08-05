@@ -1,4 +1,5 @@
 {
+    "path": "/home/kalos/media",
     "media":
     [
         {
@@ -37,4 +38,5 @@
         
         
     ]
-    }
+
+}

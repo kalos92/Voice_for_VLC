@@ -1,6 +1,4 @@
-add_library(
-        Media.cpp
-        Media.h
+add_executable(
         VlcManager.cpp
         VlcManager.h
 )

@@ -12748,7 +12748,7 @@ boundaries compute_boundaries(FloatType value)
                     ? diyfp(F, kMinExp)
                     : diyfp(F + kHiddenBit, static_cast<int>(E) - kBias);
 
-    // Compute the boundaries m- and m+ of the floating-point value
+    // Compute the boundaries media- and media+ of the floating-point value
     // v = f * 2^e.
     //
     // Determine v- and v+, the floating-point predecessor and successor if v,
@@ -12759,15 +12759,15 @@ boundaries compute_boundaries(FloatType value)
     //
     //      v+ = v + 2^e
     //
-    // Let m- = (v- + v) / 2 and m+ = (v + v+) / 2. All real numbers _strictly_
-    // between m- and m+ round to v, regardless of how the input rounding
+    // Let media- = (v- + v) / 2 and media+ = (v + v+) / 2. All real numbers _strictly_
+    // between media- and media+ round to v, regardless of how the input rounding
     // algorithm breaks ties.
     //
     //      ---+-------------+-------------+-------------+-------------+---  (A)
-    //         v-            m-            v             m+            v+
+    //         v-            media-            v             media+            v+
     //
     //      -----------------+------+------+-------------+-------------+---  (B)
-    //                       v-     m-     v             m+            v+
+    //                       v-     media-     v             media+            v+
 
     const bool lower_boundary_is_closer = F == 0 and E > 1;
     const diyfp m_plus = diyfp(2 * v.f + 1, v.e - 1);
@@ -12775,10 +12775,10 @@ boundaries compute_boundaries(FloatType value)
                           ? diyfp(4 * v.f - 1, v.e - 2)  // (B)
                           : diyfp(2 * v.f - 1, v.e - 1); // (A)
 
-    // Determine the normalized w+ = m+.
+    // Determine the normalized w+ = media+.
     const diyfp w_plus = diyfp::normalize(m_plus);
 
-    // Determine w- = m- such that e_(w-) = e_(w+).
+    // Determine w- = media- such that e_(w-) = e_(w+).
     const diyfp w_minus = diyfp::normalize_to(m_minus, w_plus.e);
 
     return {diyfp::normalize(v), w_minus, w_plus};
@@ -13259,26 +13259,26 @@ inline void grisu2_digit_gen(char* buffer, int& length, int& decimal_exponent,
     //          = p2 / 2^-e
     //          = d[-1] / 10^1 + d[-2] / 10^2 + ...
     //
-    // Now generate the digits d[-m] of p1 from left to right (m = 1,2,...)
+    // Now generate the digits d[-media] of p1 from left to right (media = 1,2,...)
     //
-    //      p2 * 2^e = d[-1]d[-2]...d[-m] * 10^-m
-    //                      + 10^-m * (d[-m-1] / 10^1 + d[-m-2] / 10^2 + ...)
+    //      p2 * 2^e = d[-1]d[-2]...d[-media] * 10^-media
+    //                      + 10^-media * (d[-media-1] / 10^1 + d[-media-2] / 10^2 + ...)
     //
     // using
     //
-    //      10^m * p2 = ((10^m * p2) div 2^-e) * 2^-e + ((10^m * p2) mod 2^-e)
+    //      10^media * p2 = ((10^media * p2) div 2^-e) * 2^-e + ((10^media * p2) mod 2^-e)
     //                = (                   d) * 2^-e + (                   r)
     //
     // or
-    //      10^m * p2 * 2^e = d + r * 2^e
+    //      10^media * p2 * 2^e = d + r * 2^e
     //
     // i.e.
     //
     //      M+ = buffer + p2 * 2^e
-    //         = buffer + 10^-m * (d + r * 2^e)
-    //         = (buffer * 10^m + d) * 10^-m + 10^-m * r * 2^e
+    //         = buffer + 10^-media * (d + r * 2^e)
+    //         = (buffer * 10^media + d) * 10^-media + 10^-media * r * 2^e
     //
-    // and stop as soon as 10^-m * r * 2^e <= delta * 2^e
+    // and stop as soon as 10^-media * r * 2^e <= delta * 2^e
 
     assert(p2 > delta);
 
@@ -13286,36 +13286,36 @@ inline void grisu2_digit_gen(char* buffer, int& length, int& decimal_exponent,
     for (;;)
     {
         // Invariant:
-        //      M+ = buffer * 10^-m + 10^-m * (d[-m-1] / 10 + d[-m-2] / 10^2 + ...) * 2^e
-        //         = buffer * 10^-m + 10^-m * (p2                                 ) * 2^e
-        //         = buffer * 10^-m + 10^-m * (1/10 * (10 * p2)                   ) * 2^e
-        //         = buffer * 10^-m + 10^-m * (1/10 * ((10*p2 div 2^-e) * 2^-e + (10*p2 mod 2^-e)) * 2^e
+        //      M+ = buffer * 10^-media + 10^-media * (d[-media-1] / 10 + d[-media-2] / 10^2 + ...) * 2^e
+        //         = buffer * 10^-media + 10^-media * (p2                                 ) * 2^e
+        //         = buffer * 10^-media + 10^-media * (1/10 * (10 * p2)                   ) * 2^e
+        //         = buffer * 10^-media + 10^-media * (1/10 * ((10*p2 div 2^-e) * 2^-e + (10*p2 mod 2^-e)) * 2^e
         //
         assert(p2 <= (std::numeric_limits<std::uint64_t>::max)() / 10);
         p2 *= 10;
         const std::uint64_t d = p2 >> -one.e;     // d = (10 * p2) div 2^-e
         const std::uint64_t r = p2 & (one.f - 1); // r = (10 * p2) mod 2^-e
         //
-        //      M+ = buffer * 10^-m + 10^-m * (1/10 * (d * 2^-e + r) * 2^e
-        //         = buffer * 10^-m + 10^-m * (1/10 * (d + r * 2^e))
-        //         = (buffer * 10 + d) * 10^(-m-1) + 10^(-m-1) * r * 2^e
+        //      M+ = buffer * 10^-media + 10^-media * (1/10 * (d * 2^-e + r) * 2^e
+        //         = buffer * 10^-media + 10^-media * (1/10 * (d + r * 2^e))
+        //         = (buffer * 10 + d) * 10^(-media-1) + 10^(-media-1) * r * 2^e
         //
         assert(d <= 9);
         buffer[length++] = static_cast<char>('0' + d); // buffer := buffer * 10 + d
         //
-        //      M+ = buffer * 10^(-m-1) + 10^(-m-1) * r * 2^e
+        //      M+ = buffer * 10^(-media-1) + 10^(-media-1) * r * 2^e
         //
         p2 = r;
         m++;
         //
-        //      M+ = buffer * 10^-m + 10^-m * p2 * 2^e
+        //      M+ = buffer * 10^-media + 10^-media * p2 * 2^e
         // Invariant restored.
 
         // Check if enough digits have been generated.
         //
-        //      10^-m * p2 * 2^e <= delta * 2^e
-        //              p2 * 2^e <= 10^m * delta * 2^e
-        //                    p2 <= 10^m * delta
+        //      10^-media * p2 * 2^e <= delta * 2^e
+        //              p2 * 2^e <= 10^media * delta * 2^e
+        //                    p2 <= 10^media * delta
         delta *= 10;
         dist  *= 10;
         if (p2 <= delta)
@@ -13324,15 +13324,15 @@ inline void grisu2_digit_gen(char* buffer, int& length, int& decimal_exponent,
         }
     }
 
-    // V = buffer * 10^-m, with M- <= V <= M+.
+    // V = buffer * 10^-media, with M- <= V <= M+.
 
     decimal_exponent -= m;
 
-    // 1 ulp in the decimal representation is now 10^-m.
-    // Since delta and dist are now scaled by 10^m, we need to do the
+    // 1 ulp in the decimal representation is now 10^-media.
+    // Since delta and dist are now scaled by 10^media, we need to do the
     // same with ulp in order to keep the units in sync.
     //
-    //      10^m * 10^-m = 1 = 2^-e * 2^e = ten_m * 2^e
+    //      10^media * 10^-media = 1 = 2^-e * 2^e = ten_m * 2^e
     //
     const std::uint64_t ten_m = one.f;
     grisu2_round(buffer, length, dist, delta, p2, ten_m);
@@ -13365,12 +13365,12 @@ inline void grisu2(char* buf, int& len, int& decimal_exponent,
     assert(m_plus.e == v.e);
 
     //  --------(-----------------------+-----------------------)--------    (A)
-    //          m-                      v                       m+
+    //          media-                      v                       media+
     //
     //  --------------------(-----------+-----------------------)--------    (B)
-    //                      m-          v                       m+
+    //                      media-          v                       media+
     //
-    // First scale v (and m- and m+) such that the exponent is in the range
+    // First scale v (and media- and media+) such that the exponent is in the range
     // [alpha, gamma].
 
     const cached_power cached = get_cached_power_for_binary_exponent(m_plus.e);
@@ -13384,7 +13384,7 @@ inline void grisu2(char* buf, int& len, int& decimal_exponent,
 
     //  ----(---+---)---------------(---+---)---------------(---+---)----
     //          w-                      w                       w+
-    //          = c*m-                  = c*v                   = c*m+
+    //          = c*media-                  = c*v                   = c*media+
     //
     // diyfp::mul rounds its result and c_minus_k is approximated too. w, w- and
     // w+ are now off by a small amount.
@@ -13402,7 +13402,7 @@ inline void grisu2(char* buf, int& len, int& decimal_exponent,
     //
     // And digit_gen generates the shortest possible such number in [M-, M+].
     // Note that this does not mean that Grisu2 always generates the shortest
-    // possible number in the interval (m-, m+).
+    // possible number in the interval (media-, media+).
     const diyfp M_minus(w_minus.f + 1, w_minus.e);
     const diyfp M_plus (w_plus.f  - 1, w_plus.e );
 
