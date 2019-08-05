@@ -1,18 +1,12 @@
-/home/kalos/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/kalos/CLionProjects/Voice_for_VLC
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   random
---   system
---   thread
---   filesystem
---   chrono
---   atomic
---   date_time
---   regex
--- Found LibVLC include-dir path: /usr/include
--- Found LibVLC library path:/usr/lib/libvlc.so
--- Found LibVLCcore library path:/usr/lib/libvlccore.so
--- Using the single-header code from /home/kalos/CLionProjects/Voice_for_VLC/json/single_include/
--- Configuring done
--- Generating done
--- Build files have been written to: /home/kalos/CLionProjects/Voice_for_VLC/cmake-build-release
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /Users/ccarrabbotta/Voice_for_VLC
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+LIBVLC_INCLUDE_DIR
+   used as include directory in directory /Users/ccarrabbotta/Voice_for_VLC
+   used as include directory in directory /Users/ccarrabbotta/Voice_for_VLC
+   used as include directory in directory /Users/ccarrabbotta/Voice_for_VLC
+LIBVLC_LIBRARY
+    linked by target "Voice_for_VLC" in directory /Users/ccarrabbotta/Voice_for_VLC
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/ccarrabbotta/Voice_for_VLC/cmake-build-release/CMakeFiles/CMakeOutput.log".

@@ -4,7 +4,6 @@ project(Voice_for_VLC)
 set(CMAKE_CXX_STANDARD 17)
 
 find_library(CPPREST_LIB cpprest)
-find_package(Boost REQUIRED COMPONENTS random system thread filesystem chrono atomic date_time regex)
 find_package(OpenSSL 1.0.0 REQUIRED)
 FIND_PATH(LIBVLC_INCLUDE_DIR vlc/vlc.h
         HINTS "$ENV{LIBVLC_INCLUDE_PATH}"
@@ -43,27 +42,23 @@ ELSE (LIBVLC_FOUND)
     ENDIF (LIBVLC_FIND_REQUIRED)
 ENDIF (LIBVLC_FOUND)
 FIND_PATH(LIBVLC_INCLUDE_DIR PATHS "${CMAKE_INCLUDE_PATH}/vlc" NAMES vlc.h)
-add_executable(Voice_for_VLC main.cpp message.cpp message.h synch_queue.cpp synch_queue.h vlc_manager.cpp vlc_manager.h NotRunningException.cpp NotRunningException.h media.cpp media.h NotFoundException.cpp NotFoundException.h rest_server.cpp rest_server.h TextOperation.cpp TextOperation.h NotValidURL.cpp NotValidURL.h)
+
+add_subdirectory(src/exceptions)
+add_subdirectory(src/network)
+add_subdirectory(src/player)
+add_subdirectory(src/synchronization)
+add_subdirectory(src/utils)
+
+
+add_executable(
+        Voice_for_VLC src/Main.cpp)
 
 set(CMAKE_CXX_FLAGS "-pthread")
 set(JSON_BuildTests OFF CACHE INTERNAL "")
-add_subdirectory(json)
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${LIBVLC_INCLUDE_DIR})
 set(LIBS ${LIBS} ${OpenCV_LIBS})
 set(LIBS ${LIBS} ${LIBVLC_LIBRARY})
-set(LIBS ${LIBS} nlohmann_json::nlohmann_json)
 
 target_link_libraries(Voice_for_VLC ${LIBS})
-target_link_libraries(Voice_for_VLC
-        ${CPPREST_LIB}
-        Boost::boost
-        Boost::random
-        Boost::system
-        Boost::thread
-        Boost::filesystem
-        Boost::chrono
-        Boost::atomic
-        Boost::date_time
-        Boost::regex
-        OpenSSL::SSL)
+
