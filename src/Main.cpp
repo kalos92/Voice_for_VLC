@@ -34,7 +34,7 @@ int main(int argc, char ** argv) {
     }
 
     Costants k(argv[1], argv[2]);
-    std::thread vlc(&vlc_manager::controller , k);
+    std::thread vlc(&VlcManager::controller , k);
     rest_server restServer;
 
     vlc.join();

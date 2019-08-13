@@ -37,7 +37,7 @@ class rest_server {
         void handle_post(const http_request& message);
         void handle_delete(const http_request& message);
         void handle_error(pplx::task<void>& t);
-        synch_queue *sq;
+        ConcurrencyQueue *sq;
         pplx::task<void>open(){return server_listener->open();}
         pplx::task<void>close(){return server_listener->close();}
 

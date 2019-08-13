@@ -18,32 +18,26 @@
 #include "../exceptions/NotRunningException.h"
 #include "../exceptions/NotFoundException.h"
 #include "Media.h"
+#include "../player/CurrentStatus.h"
 
 class DatabaseManager {
 
 public:
         static DatabaseManager* getDatabaseInstance();
-        std::pair<std::string, uint64_t> resumePlaying(vlc_manager::CurrentStatus *cs);
-        const std::string calculateNextMedia(vlc_manager::CurrentStatus *cs, bool next);
-        static std::string calculate_what_to_play(CurrentStatus *, Message *, const Media& , const Costants&);
-        static void save_current_status(CurrentStatus, int64_t);
-        static std::pair<std::string, int64_t> convert_to_ms(const std::pair<std::string, int64_t>& pair);
-
+        std::pair<std::string, uint64_t> resumePlaying(CurrentStatus *cs);
+        const std::string calculateNextMedia(CurrentStatus *cs);
+        const std::string calculatePreviousMedia(CurrentStatus *cs);
+        std::string calculateRequestedMedia(CurrentStatus *,const CommandMessage&, const Media&);
+        Media getMediafromString(const std::string&);
 
 private:
         DatabaseManager() = default;
         ~DatabaseManager() = default;
-
         void buildDatabaseFromJson();
-        Media getMediafromString(const std::string&);
-
         std::vector<Media> mediaDatabase;
         std::string mediaBasePath = "";
-
-
         static DatabaseManager *instance;
         static std::once_flag inited;
-
 };
 
 

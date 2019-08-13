@@ -23,7 +23,7 @@ rest_server::rest_server()
     server_listener->support(methods::PUT, std::bind(&rest_server::handle_put, this, std::placeholders::_1));
     server_listener->support(methods::POST, std::bind(&rest_server::handle_post, this, std::placeholders::_1));
     server_listener->support(methods::DEL, std::bind(&rest_server::handle_delete, this, std::placeholders::_1));
-    sq = synch_queue::get_instance();
+    sq = ConcurrencyQueue::get_instance();
     cout << utility::string_t(U("Listening for requests at: ")) << addr.to_string() << std::endl;
 
 }

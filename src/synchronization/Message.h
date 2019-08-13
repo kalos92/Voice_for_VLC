@@ -23,6 +23,7 @@ class CommandMessage : public Message {
         CommandMessage(StateMachine::Command command, std::string title, int season, int episode,
                 std::pair<std::string, int64_t> time) :
             command(command), title(std::move(title)), season(season), episode(episode), time(std::move(time)){};
+        CommandMessage() = default;
 
         CommandMessage& operator=(const CommandMessage& other);
         const StateMachine::Command &getCommand() const; //& return a const reference

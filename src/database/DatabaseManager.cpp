@@ -5,7 +5,6 @@
 #include "DatabaseManager.h"
 using json = nlohmann::json;
 
-
 DatabaseManager* DatabaseManager::getDatabaseInstance() {
     std::call_once(inited,[]{
         instance = new DatabaseManager();
@@ -34,7 +33,6 @@ void DatabaseManager::buildDatabaseFromJson() {
         media.setFormat(j["media"][i]["format"]);
         media.setEpisodes(j["media"][i]["episodes"]);
 
-
         for(int k = 0 ; k < j["media"][i]["seasons"].size() ; k++ ) {
             media.putEpisodeXSeason(j["media"][i]["seasons"][k]["season"], j["media"][i]["seasons"][k]["episodes"]);
         }
@@ -43,10 +41,10 @@ void DatabaseManager::buildDatabaseFromJson() {
 }
 
 /*
- * A RESTART request needs to parse the save.JSON file and to update the current status of vlc_manager
+ * A RESTART request needs to parse the save.JSON file and to update the current status of VlcManager
  *
  */
-std::pair<std::string, uint64_t> DatabaseManager::resumePlaying( vlc_manager::CurrentStatus *cs){
+std::pair<std::string, uint64_t> DatabaseManager::resumePlaying(CurrentStatus *cs){
 
     json j;
 
@@ -116,36 +114,21 @@ Media DatabaseManager::getMediafromString(const std::string& title){
  *      Go to the next episode
  *
  */
-const std::string DatabaseManager::calculateNextMedia(vlc_manager::CurrentStatus *cs, bool next) {
+const std::string DatabaseManager::calculateNextMedia(CurrentStatus *cs) {
 
     int episode_in_season = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
     int seasons = cs->current_media.getEpisodeXSeason().size();
 
-    if(next){
-        //if I'm at the last episode a middle season
-        if(cs->episode == episode_in_season && cs->season < seasons){
-            cs->episode = 1;
-            cs->season++;
-        }//if I'm at the last episode of the last season
-        else if(cs->episode == episode_in_season && cs->season == seasons){
-            cs->season = 1;
-            cs->episode = 1;
-        }else//if I'media at whatever episode of a season
-            cs->episode++;
-
-
-    }else{
-        //if I'm at the first episode of a middle season
-        if (cs->episode == 1 && cs->season != 1) {
-            cs->season--;
-            cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
-        }//if I'm at the first episode of the first season
-        else if(cs->episode == 1 && cs->season == 1){
-            cs->season = seasons;
-            cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
-        }else//if I'm at whatever episode of a season
-            cs->episode--;
-    }
+    //if I'm at the last episode a middle season
+    if(cs->episode == episode_in_season && cs->season < seasons){
+        cs->episode = 1;
+        cs->season++;
+    }//if I'm at the last episode of the last season
+    else if(cs->episode == episode_in_season && cs->season == seasons){
+        cs->season = 1;
+        cs->episode = 1;
+    }else//if I'media at whatever episode of a season
+        cs->episode++;
 
     //Return the right path
     return mediaBasePath + "/" + cs->current_media.getPath() + "/" + std::to_string(cs->season) + "/" +
@@ -154,6 +137,29 @@ const std::string DatabaseManager::calculateNextMedia(vlc_manager::CurrentStatus
 
 }
 
+const std::string DatabaseManager::calculatePreviousMedia(CurrentStatus *cs) {
+
+    int episode_in_season = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
+    int seasons = cs->current_media.getEpisodeXSeason().size();
+
+    //if I'm at the first episode of a middle season
+    if (cs->episode == 1 && cs->season != 1) {
+        cs->season--;
+        cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
+    }//if I'm at the first episode of the first season
+    else if(cs->episode == 1 && cs->season == 1){
+        cs->season = seasons;
+        cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
+    }else//if I'm at whatever episode of a season
+        cs->episode--;
+
+
+    //Return the right path
+    return mediaBasePath + "/" + cs->current_media.getPath() + "/" + std::to_string(cs->season) + "/" +
+           cs->current_media.getTitle() + "S" + std::to_string(cs->season) + "E" +
+           std::to_string(cs->episode) + cs->current_media.getFormat();
+
+}
 
 
 /*This function calculate the episode that you want to play
@@ -170,42 +176,37 @@ const std::string DatabaseManager::calculateNextMedia(vlc_manager::CurrentStatus
  * this function returns the first episode of the selected season 1.
  *
  */
-std::string vlc_manager::calculate_what_to_play(CurrentStatus *cs, Message *msg, const Media& media, const Costants& k) {
+std::string DatabaseManager::calculateRequestedMedia(CurrentStatus *cs, const CommandMessage &message, const Media& media) {
 
     //If is specified the episode but not the season
-    if(msg->getSeason() == 0){
+    if(message.getSeason() == 0){
         int season = 0;
         int episode = 0;
 
-        //User has specified an episode that do not exists
-        if(msg->getEpisode() > media.getEpisodes())
+        if(message.getEpisode() > media.getEpisodes())
             return "";
 
-            //first episode of first season, do not lose time
-        else if(msg->getEpisode() == 1){
+        else if(message.getEpisode() == 1){
             season = 1;
             episode = 1;
         }
 
-            //last episode of last season, do not lose time
-        else if(msg->getEpisode() == media.getEpisodes()){
+        else if(message.getEpisode() == media.getEpisodes()){
             season = media.getEpisodeXSeason().size();
             episode = media.getEpisodeXSeason()[media.getEpisodeXSeason().size()-1].second;
         }
 
-            //calculate
         else{
 
-            auto exs = media.getEpisodeXSeason();
+            auto seasons = media.getEpisodeXSeason();
             int sum = 0;
 
-            //Adding episodes while our episode is greater than the sum of the season episode
-            for( auto es : exs ){
+            for(auto episodesInSeason : seasons){
 
-                sum += es.second;
+                sum += episodesInSeason.second;
 
                 //if our episode is less than this sum, means that the episode is in this season
-                if(sum >= msg->getEpisode())
+                if(sum >= message.getEpisode())
                     break;
 
                 //else is in the next season
@@ -214,69 +215,24 @@ std::string vlc_manager::calculate_what_to_play(CurrentStatus *cs, Message *msg,
 
             // #episode - the summary of the previous episode * + the episode in that season give us
             // the right episode number
-            episode = msg->getEpisode() - sum + exs[season].second;
+            episode = message.getEpisode() - sum + seasons[season].second;
 
-            //index from computer notation to human notation
             season++;
         }
 
-        //update the current status
-        cs->episode = episode;
-        cs->season = season;
-
-        //return the right path
-        return k.getPath() + "/" +media.getPath() + "/" + std::to_string(season) + "/" + media.getTitle() + "S"
-               + std::to_string(season) + "E" + std::to_string(episode) + media.getFormat();
-
+        cs->setEpisode(episode);
+        cs->setSeason(season);
     }
-        //The season is specified, so first episode of the selected season
     else{
-
-        //update the current status
-        cs->episode = 1;
-        cs->season = msg->getSeason();
-
-        //return the right path
-        return k.getPath() + "/" +media.getPath() + "/" + std::to_string(msg->getSeason()) + "/" + media.getTitle() + "S"
-               + std::to_string(msg->getSeason()) + "E" + std::to_string(1) + media.getFormat();
-
+        cs->setEpisode(1);
+        cs->setSeason(message.getSeason());
     }
+
+    return mediaBasePath + "/" + media.getPath() + "/" + std::to_string(cs->getSeason()) + "/" + media.getTitle() + "S"
+           + std::to_string(cs->getSeason()) + "E" + std::to_string(cs->getEpisode()) + media.getFormat();
 }
 
-/*
- * This function save the the current state in case of STOP or DESTROY
- * in order to allow the use of the RESTART command
- */
-void vlc_manager::save_current_status(vlc_manager::CurrentStatus cs, int64_t time) {
 
-    json j;
 
-    std::ofstream file("LastState.json");
 
-    j["status"]["last_title"] = cs.current_media->getTitle();
-    j["status"]["last_episode"] = cs.episode;
-    j["status"]["last_season"] = cs.season;
-    j["status"]["stopped_time"] = time;
-
-    file << std::setw(4) << j << std::endl;
-
-}
-
-/*
- * From hours, minutes, seconds to milliseconds that libvlc_media_player_set_time needs
- */
-std::pair<std::string, int64_t> vlc_manager::convert_to_ms(const std::pair<std::string, int64_t>& pair) {
-
-    if(pair.first == "seconds")
-        return std::make_pair("seconds", pair.second*1000);
-
-    if(pair.first == "minutes")
-        return std::make_pair("minutes", pair.second*60*1000);
-
-    if(pair.first == "hours")
-        return std::make_pair("seconds", pair.second*60*60*1000);
-
-    if(pair.first == "none")
-        return pair;
-}
 

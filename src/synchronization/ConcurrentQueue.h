@@ -11,29 +11,30 @@
 #include <mutex>
 #include <condition_variable>
 #include <list>
+#include "../exceptions/NotRunningException.h"
 
 
-class synch_queue {
+class ConcurrencyQueue {
 
     public:
-    static synch_queue* get_instance();
-    std::unique_ptr<Message> read_message();
-    void write_message(const Message&);
-    std::unique_ptr<Response> read_response();
-    void write_response(const Response&);
+    static ConcurrencyQueue* getInstance();
+    std::unique_ptr<CommandMessage> readMessage();
+    void writeMessage(const CommandMessage&);
+    std::unique_ptr<CommandResponse> readResponse();
+    void writeResponse(const CommandResponse&);
 
     private:
-        synch_queue();
-        ~synch_queue()= default;
+        ConcurrencyQueue();
+        ~ConcurrencyQueue()= default;
         std::mutex mutex_mex;
         std::condition_variable cv_mex;
         std::mutex mutex_res;
         std::condition_variable cv_res;
-        std::list<Message> messages;
-        std::list<Response> responses;
+        std::list<CommandMessage> messages;
+        std::list<CommandResponse> responses;
         bool is_running = false;
         static std::once_flag inited;
-        static synch_queue *instance;
+        static ConcurrencyQueue *instance;
 };
 
 

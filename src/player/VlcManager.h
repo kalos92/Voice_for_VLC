@@ -5,37 +5,45 @@
 #ifndef VOICE_FOR_VLC_VLCMANAGER_H
 #define VOICE_FOR_VLC_VLCMANAGER_H
 
-
-#include <vlc/vlc.h>
 #include <cstring>
 #include <unistd.h>
 #include <fstream>
 #include <algorithm>
 #include <iomanip>
 #include "../synchronization/ConcurrentQueue.h"
+#include "../synchronization/Message.h"
 #include "../database/Media.h"
 #include "../utils/json.hpp"
 #include "../exceptions/NotRunningException.h"
 #include "../exceptions/NotFoundException.h"
+#include "CurrentStatus.h"
+#include "../database/DatabaseManager.h"
+#include "../utils/Utils.cpp"
 
 
-class vlc_manager {
+class VlcManager {
     public:
-        vlc_manager()= default;
-        ~vlc_manager()= default;
-
-        typedef struct current_status{
-            libvlc_instance_t *instance = nullptr ;
-            libvlc_media_player_t *mediaPlayer = nullptr;
-            libvlc_media_t *media = nullptr;
-            Media current_media;
-            int episode = 0 ;
-            int season = 0;
-        }CurrentStatus;
+        VlcManager();
+        ~VlcManager() = default;
 
         void controller();
 
 private:
+
+        void Play(const CommandMessage &);
+        void Pause();
+        void Stop();
+        void Next();
+        void Previuos();
+        void goToTime(const CommandMessage &);
+        void goToPercentage(const CommandMessage &);
+        void Destroy();
+        void Restart();
+        void Resume();
+        CurrentStatus currentStatus;
+        StateMachine::State state;
+        DatabaseManager *database;
+        ConcurrencyQueue *concurrencyQueue;
 
 };
 

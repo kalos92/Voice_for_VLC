@@ -51,7 +51,7 @@ add_subdirectory(src/synchronization)
 add_subdirectory(src/utils)
 add_subdirectory(src/database)
 
-add_executable(Voice_for_VLC src/Main.cpp)
+add_executable(Voice_for_VLC src/Main.cpp src/player/VlcManager.h src/player/VlcManager.cpp src/player/CurrentStatus.cpp src/player/CurrentStatus.h src/utils/Utils.cpp)
 
 set(CMAKE_CXX_FLAGS "-pthread")
 set(JSON_BuildTests OFF CACHE INTERNAL "")

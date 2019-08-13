@@ -3,13 +3,12 @@
 //
 
 #include "ConcurrentQueue.h"
-#include "NotRunningException.h"
-#include <mutex>
 
-std::once_flag synch_queue::inited;
-synch_queue *synch_queue::instance;
 
-void synch_queue::write_message(const Message& mex) {
+std::once_flag ConcurrencyQueue::inited;
+ConcurrencyQueue *ConcurrencyQueue::instance;
+
+void ConcurrencyQueue::writeMessage(const CommandMessage& mex) {
 
     if(!is_running)
         throw NotRunningException();
@@ -21,7 +20,7 @@ void synch_queue::write_message(const Message& mex) {
     this->cv_mex.notify_one();
 }
 
-void synch_queue::write_response(const Response& res) {
+void ConcurrencyQueue::writeResponse(const CommandResponse& res) {
 
     if(!is_running)
         throw NotRunningException();
@@ -33,12 +32,13 @@ void synch_queue::write_response(const Response& res) {
     this->cv_res.notify_all();
 }
 
-std::unique_ptr<Message> synch_queue::read_message() {
+std::unique_ptr<CommandMessage> ConcurrencyQueue::readMessage() {
 
     if(!is_running)
         throw NotRunningException();
 
-    Message mex;
+    CommandMessage message;
+
     while(true){
         std::unique_lock<std::mutex> lock(this->mutex_mex);
 
@@ -48,26 +48,17 @@ std::unique_ptr<Message> synch_queue::read_message() {
         if(messages.empty())
             continue;
 
-        mex = this->messages.front();
-        std::cout << mex.getCommand() << std::endl;
+        std::cout << messages.front().getCommand() << std::endl;
+
         this->messages.pop_front();
 
-//        if(mex.getCommand() == DESTROY) {
-//            while (!messages.empty()) {
-//                this->messages.pop_front();
-//            }
-//            this->is_running = false;
-//        }
-       // else
-            std::cout << mex.getCommand() << std::endl;
+        std::unique_ptr<CommandMessage> pointer( new CommandMessage(message) );
 
-        std::unique_ptr<Message> pointer( new Message(mex) );
         return pointer;
     }
-
 }
 
-std::unique_ptr<Response> synch_queue::read_response() {
+std::unique_ptr<Response> ConcurrencyQueue::readResponse() {
 
     if(!is_running)
         throw NotRunningException();
@@ -91,14 +82,14 @@ std::unique_ptr<Response> synch_queue::read_response() {
 }
 
 
-synch_queue* synch_queue::get_instance() {
+ConcurrencyQueue* ConcurrencyQueue::getInstance() {
     std::call_once(inited,[]{
-        instance = new synch_queue();
+        instance = new ConcurrencyQueue();
     });
     return instance;
 }
 
-synch_queue::synch_queue() {
+ConcurrencyQueue::ConcurrencyQueue() {
 
     this->is_running = true;
 }
