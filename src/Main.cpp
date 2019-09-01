@@ -3,7 +3,8 @@
 #include "synchronization/ConcurrentQueue.h"
 #include "player/VlcManager.h"
 #include "network/RestServer.h"
-#include "utils/StateMachine.h"
+#include "utils/StateMachine.h
+#include <thread>
 
 
 
@@ -33,11 +34,12 @@ int main(int argc, char ** argv) {
         return -1;
     }
 
-    Costants k(argv[1], argv[2]);
-    std::thread vlc(&VlcManager::controller , k);
+    VlcManager vlc;
+
+    std::thread threadVlc(&VlcManager::controller, &vlc);
     rest_server restServer;
 
-    vlc.join();
+    threadVlc.join();
 
     return 0;
 }

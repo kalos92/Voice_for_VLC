@@ -1,64 +1,39 @@
-cmake_minimum_required(VERSION 3.14)
+# ==================== INITIAL CONFIGURATION ====================
+
+cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+
 project(Voice_for_VLC CXX)
+
+include(FindPkgConfig)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_library(CPPREST_LIB cpprest)
-find_package(OpenSSL 1.0.0 REQUIRED)
+# ==================== SEARCHING FOR LIBPISTACHE ====================
 
-FIND_PATH(LIBVLC_INCLUDE_DIR vlc/vlc.h
-        HINTS "$ENV{LIBVLC_INCLUDE_PATH}"
-        PATHS
-        "/usr/include"
-        "/usr/include/vlc"
-        "/usr/local/include"
-        "/usr/local/include/vlc"
-        )
-FIND_LIBRARY(LIBVLC_LIBRARY NAMES vlc libvlc
-        HINTS "$ENV{LIBVLC_LIBRARY_PATH}"
-        PATHS
-        "$ENV{LIB_DIR}/lib"
-        )
-FIND_LIBRARY(LIBVLC_LIBRARY NAMES vlc libvlc)
-FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES vlccore libvlccore
-        HINTS "$ENV{LIBVLC_LIBRARY_PATH}"
-        PATHS
-        "$ENV{LIB_DIR}/lib"
-        )
-FIND_LIBRARY(LIBVLCCORE_LIBRARY NAMES vlccore libvlccore)
+pkg_check_modules(PISTACHE REQUIRED libpistache)
 
-IF (LIBVLC_INCLUDE_DIR AND LIBVLC_LIBRARY AND LIBVLCCORE_LIBRARY)
-    SET(LIBVLC_FOUND TRUE)
-ENDIF (LIBVLC_INCLUDE_DIR AND LIBVLC_LIBRARY AND LIBVLCCORE_LIBRARY)
+# ==================== SEARCHING FOR LIBVLC AND LIBVLCCORE ====================
 
-IF (LIBVLC_FOUND)
-    IF (NOT LIBVLC_FIND_QUIETLY)
-        MESSAGE(STATUS "Found LibVLC include-dir path: ${LIBVLC_INCLUDE_DIR}")
-        MESSAGE(STATUS "Found LibVLC library path:${LIBVLC_LIBRARY}")
-        MESSAGE(STATUS "Found LibVLCcore library path:${LIBVLCCORE_LIBRARY}")
-    ENDIF (NOT LIBVLC_FIND_QUIETLY)
-ELSE (LIBVLC_FOUND)
-    IF (LIBVLC_FIND_REQUIRED)
-        MESSAGE(FATAL_ERROR "Could not find LibVLC")
-    ENDIF (LIBVLC_FIND_REQUIRED)
-ENDIF (LIBVLC_FOUND)
-FIND_PATH(LIBVLC_INCLUDE_DIR PATHS "${CMAKE_INCLUDE_PATH}/vlc" NAMES vlc.h)
+pkg_check_modules(VLC REQUIRED libvlc)
 
-add_subdirectory(src/exceptions)
-add_subdirectory(src/network)
-add_subdirectory(src/player)
-add_subdirectory(src/synchronization)
-add_subdirectory(src/utils)
-add_subdirectory(src/database)
+pkg_check_modules(VLCCORE QUIET libvlccore vlccore)
 
-add_executable(Voice_for_VLC src/Main.cpp src/player/VlcManager.h src/player/VlcManager.cpp src/player/CurrentStatus.cpp src/player/CurrentStatus.h src/utils/Utils.cpp)
+# ==================== BUILDING THE EXECUTABLE ====================
 
-set(CMAKE_CXX_FLAGS "-pthread")
-set(JSON_BuildTests OFF CACHE INTERNAL "")
-include_directories(${OpenCV_INCLUDE_DIRS})
-include_directories(${LIBVLC_INCLUDE_DIR})
-set(LIBS ${LIBS} ${OpenCV_LIBS})
-set(LIBS ${LIBS} ${LIBVLC_LIBRARY})
+file(GLOB DATABASE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/database/* )
+file(GLOB EXCEPTIONS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/exceptions/* )
+file(GLOB NETWORK_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/network/* )
+file(GLOB PLAYER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/player/* )
+file(GLOB SYNCHRONIZATION_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/synchronization/* )
+file(GLOB UTILS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/utils/* )
+
+add_executable(Voice_for_VLC ${CMAKE_CURRENT_SOURCE_DIR}/src/Main.cpp ${DATABASE_FILES} ${EXCEPTION_FILES} ${NETWORK_FILES} ${PLAYER_FILES} ${SYNCHRONIZATION_FILES} ${UTILS_FILES})
+
+set(LIBS ${LIBS} ${VLC} ${PISTACHE} ${VLCCORE})
 
 target_link_libraries(Voice_for_VLC ${LIBS})
+
+# ==================== INSTALLATION ====================
+
+install(TARGETS Voice_for_VLC DESTINATION /usr/local/bin)
 

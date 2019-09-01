@@ -66,3 +66,40 @@ void CurrentStatus::saveCurrentStatus(int64_t time) {
 
     file << std::setw(4) << j << std::endl;
 }
+
+std::string CurrentStatus::getCurrentPath() {
+
+    return current_media.getPath() + "/" + std::to_string(season) + "/" +
+           current_media.getTitle() + "S" + std::to_string(season) + "E" +
+           std::to_string(episode) + current_media.getFormat();
+}
+
+void CurrentStatus::decreaseEpisode(){
+
+    if(episode - 1 > 0)
+        episode--;
+    else
+        throw NotFoundException();
+
+}
+
+void CurrentStatus::decreaseSeason(){
+
+    if(season - 1 > 0 )
+        season--;
+    else
+        throw NotFoundException();
+}
+
+void CurrentStatus::increaseEpisode(){
+        episode++;
+}
+
+void CurrentStatus::increaseSeason(){
+
+    if(season + 1 <= current_media.getEpisodeXSeason().size() )
+        season++;
+    else
+        throw NotFoundException();
+}
+

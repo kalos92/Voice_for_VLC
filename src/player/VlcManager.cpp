@@ -15,10 +15,6 @@ VlcManager::VlcManager() {
 }
 
 
-/*
- * The main function that handles all messages and sends commands to VLC
- *
- * */
 void VlcManager::controller() {
 
     while(true) {
@@ -50,7 +46,7 @@ void VlcManager::controller() {
                         Next();
                         break;
                     case StateMachine::PREVIOUS:
-                        Previuos();
+                        Previous();
                         break;
                     case StateMachine::TIME:
                         goToTime(*(message.get()));
@@ -81,8 +77,6 @@ void VlcManager::controller() {
                     libvlc_media_player_stop(currentStatus.getMediaPlayer());
                     libvlc_media_player_release(currentStatus.getMediaPlayer());
                 }
-
-                concurrencyQueue->writeResponse(response);
             }
         }
     }
@@ -99,12 +93,14 @@ void VlcManager::Play(const CommandMessage &message){
         throw NotFoundException();
 
     currentStatus.setCurrentMedia(media);
-    std::string episode_path = database->calculateRequestedMedia(&currentStatus, message, media);
+    try {
+        std::string episode_path = database->calculateRequestedMedia(&currentStatus, message, media);
+        currentStatus.setMedia(libvlc_media_new_path(currentStatus.getInstance(), (episode_path).c_str()));
+    }catch (const NotFoundException &e){
 
-    if (episode_path.empty())
-        throw NotFoundException();
+        std::cout << e.what() << std::endl;
+    }
 
-    currentStatus.setMedia(libvlc_media_new_path(currentStatus.getInstance(), (episode_path).c_str()));
     currentStatus.setMediaPlayer(libvlc_media_player_new_from_media(currentStatus.getMedia()));
 
     libvlc_media_player_play(currentStatus.getMediaPlayer());
@@ -158,7 +154,7 @@ void VlcManager::Next() {
     concurrencyQueue->writeResponse(response);
 }
 
-void VlcManager::Previuos() {
+void VlcManager::Previous() {
 
     libvlc_media_player_stop(currentStatus.getMediaPlayer());
 

@@ -21,6 +21,7 @@
 #include "../utils/Utils.cpp"
 
 
+
 class VlcManager {
     public:
         VlcManager();
@@ -34,10 +35,9 @@ private:
         void Pause();
         void Stop();
         void Next();
-        void Previuos();
+        void Previous();
         void goToTime(const CommandMessage &);
         void goToPercentage(const CommandMessage &);
-        void Destroy();
         void Restart();
         void Resume();
         CurrentStatus currentStatus;

@@ -13,6 +13,7 @@
 #include <iomanip>
 #include "../database/Media.h"
 #include "../utils/json.hpp"
+#include "../exceptions/NotFoundException.h"
 
 
 class CurrentStatus {
@@ -48,6 +49,11 @@ public:
     int getSeason() const;
     void setSeason(int season);
     void saveCurrentStatus(int64_t);
+    std::string getCurrentPath();
+    void increaseSeason();
+    void decreaseSeason();
+    void increaseEpisode();
+    void decreaseEpisode();
 
 private:
     libvlc_instance_t *instance;

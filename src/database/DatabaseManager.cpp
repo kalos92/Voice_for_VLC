@@ -53,17 +53,15 @@ std::pair<std::string, uint64_t> DatabaseManager::resumePlaying(CurrentStatus *c
     j = json::parse(file);
 
 
-    cs->current_media = DatabaseManager::getMediafromString(j["status"]["last_title"]);
-    cs->episode = j["status"]["last_episode"];
-    cs->season = j["status"]["last_season"];
+    cs->setCurrentMedia(DatabaseManager::getMediafromString(j["status"]["last_title"]));
+    cs->setEpisode(j["status"]["last_episode"]);
+    cs->setSeason(j["status"]["last_season"]);
     uint64_t time = j["status"]["stopped_time"];
 
     std::string path;
 
-    if(cs->current_media != nullptr)
-        path = mediaBasePath + "/" + cs->current_media->getPath() + "/" + std::to_string(cs->season) + "/" +
-               cs->current_media->getTitle() + "S" + std::to_string(cs->season) + "E" +
-               std::to_string(cs->episode) + cs->current_media->getFormat();
+    if(cs->getCurrentMedia().getTitle().empty())
+        path = mediaBasePath + "/" + cs->getCurrentPath();
 
     else
         path = "";
@@ -116,49 +114,42 @@ Media DatabaseManager::getMediafromString(const std::string& title){
  */
 const std::string DatabaseManager::calculateNextMedia(CurrentStatus *cs) {
 
-    int episode_in_season = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
-    int seasons = cs->current_media.getEpisodeXSeason().size();
+    int episode_in_season = cs->getCurrentMedia().getEpisodeXSeason()[cs->getSeason()-1].second;
+    int seasons = cs->getCurrentMedia().getEpisodeXSeason().size();
 
     //if I'm at the last episode a middle season
-    if(cs->episode == episode_in_season && cs->season < seasons){
-        cs->episode = 1;
-        cs->season++;
+    if(cs->getEpisode() == episode_in_season && cs->getSeason() < seasons){
+        cs->setEpisode(1);
+        cs->increaseSeason();
     }//if I'm at the last episode of the last season
-    else if(cs->episode == episode_in_season && cs->season == seasons){
-        cs->season = 1;
-        cs->episode = 1;
+    else if(cs->getEpisode() == episode_in_season && cs->getSeason() == seasons){
+        cs->setSeason(1);
+        cs->setEpisode(1);
     }else//if I'media at whatever episode of a season
-        cs->episode++;
+        cs->increaseEpisode();
 
     //Return the right path
-    return mediaBasePath + "/" + cs->current_media.getPath() + "/" + std::to_string(cs->season) + "/" +
-           cs->current_media.getTitle() + "S" + std::to_string(cs->season) + "E" +
-           std::to_string(cs->episode) + cs->current_media.getFormat();
+    return mediaBasePath + "/" + cs->getCurrentPath();
 
 }
 
 const std::string DatabaseManager::calculatePreviousMedia(CurrentStatus *cs) {
 
-    int episode_in_season = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
-    int seasons = cs->current_media.getEpisodeXSeason().size();
+    int seasons = cs->getCurrentMedia().getEpisodeXSeason().size();
 
     //if I'm at the first episode of a middle season
-    if (cs->episode == 1 && cs->season != 1) {
-        cs->season--;
-        cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
+    if (cs->getEpisode() == 1 && cs->getSeason() != 1) {
+        cs->decreaseSeason();
+        cs->setEpisode(cs->getCurrentMedia().getEpisodeXSeason()[cs->getSeason()-1].second);
     }//if I'm at the first episode of the first season
-    else if(cs->episode == 1 && cs->season == 1){
-        cs->season = seasons;
-        cs->episode = cs->current_media.getEpisodeXSeason()[cs->season-1].second;
+    else if(cs->getSeason() == 1 && cs->getSeason() == 1){
+        cs->setSeason(seasons);
+        cs->setEpisode(cs->getCurrentMedia().getEpisodeXSeason()[cs->getSeason()-1].second);
     }else//if I'm at whatever episode of a season
-        cs->episode--;
-
+        cs->decreaseEpisode();
 
     //Return the right path
-    return mediaBasePath + "/" + cs->current_media.getPath() + "/" + std::to_string(cs->season) + "/" +
-           cs->current_media.getTitle() + "S" + std::to_string(cs->season) + "E" +
-           std::to_string(cs->episode) + cs->current_media.getFormat();
-
+    return mediaBasePath + "/" + cs->getCurrentPath();
 }
 
 
@@ -184,7 +175,7 @@ std::string DatabaseManager::calculateRequestedMedia(CurrentStatus *cs, const Co
         int episode = 0;
 
         if(message.getEpisode() > media.getEpisodes())
-            return "";
+            throw NotFoundException();
 
         else if(message.getEpisode() == 1){
             season = 1;
@@ -228,8 +219,7 @@ std::string DatabaseManager::calculateRequestedMedia(CurrentStatus *cs, const Co
         cs->setSeason(message.getSeason());
     }
 
-    return mediaBasePath + "/" + media.getPath() + "/" + std::to_string(cs->getSeason()) + "/" + media.getTitle() + "S"
-           + std::to_string(cs->getSeason()) + "E" + std::to_string(cs->getEpisode()) + media.getFormat();
+    return mediaBasePath + "/" + cs->getCurrentPath();
 }
 
 
